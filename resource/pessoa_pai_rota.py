@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask import request, jsonify
 from imageio import imopen
-from model.pessoa_pai_model import Pessoa, Empreendedor, Vaga, Trabalhador
+from model.pessoasModel import Pessoa, Empreendedor, Vaga, Trabalhador
 
 
 

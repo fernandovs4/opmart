@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
 from pathlib import Path
 from model.sql_alqhemy_para_db import db
-from model.pessoa_pai_model import Empreendedor
+from model.pessoasModel import Empreendedor
 
 
 
