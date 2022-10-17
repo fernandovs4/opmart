@@ -1,39 +1,44 @@
 from sqlalchemy import ForeignKey
 from model.sql_alqhemy_para_db import db
 
-class Pessoa(db.Model):
+# class Pessoa(db.Model):
   
+#     id = db.Column(db.Integer(), primary_key = True)
+#     nome = db.Column(db.String(80))
+#     whatsapp = db.Column(db.Integer())
+#     endereco = db.Column(db.String())
+#     email = db.Column(db.String())
+#     # hash_pwd = db.Column(db.String(100))
+   
+
+#     def __init__(self , nome, whatsapp, endereco, email, hash_pwd = ''):
+#         self.nome = nome
+#         self.whatsapp = whatsapp
+#         self.endereco = endereco
+#         self.email = email
+#         self.hash_pwd = hash_pwd
+    
+#     @classmethod
+#     def find_by_id(cls, id):
+#         return cls.query.filter_by(id = id).first()
+    
+#     @classmethod
+#     def search_all(cls):
+#         return cls.query.all()
+    
+#     def toDict(self):
+#         return {"nome": self.nome, "whatsapp": self.whatsapp, "endereco": self.endereco, "email": self.email, "hash_pwd": self.hash_pwd}
+
+
+
+class Empreendedor(db.Model):
+    __tablename__ = 'empreendedor'
     id = db.Column(db.Integer(), primary_key = True)
     nome = db.Column(db.String(80))
     whatsapp = db.Column(db.Integer())
     endereco = db.Column(db.String())
     email = db.Column(db.String())
-    # hash_pwd = db.Column(db.String(100))
-   
 
-    def __init__(self , nome, whatsapp, endereco, email, hash_pwd = ''):
-        self.nome = nome
-        self.whatsapp = whatsapp
-        self.endereco = endereco
-        self.email = email
-        self.hash_pwd = hash_pwd
-    
-    @classmethod
-    def find_by_id(cls, id):
-        return cls.query.filter_by(id = id).first()
-    
-    @classmethod
-    def search_all(cls):
-        return cls.query.all()
-    
-    def toDict(self):
-        return {"nome": self.nome, "whatsapp": self.whatsapp, "endereco": self.endereco, "email": self.email, "hash_pwd": self.hash_pwd}
-
-
-
-class Empreendedor(db.Model, Pessoa):
-    __tablename__ = 'empreendedor'
-    id_empreendedor= db.Column(db.Integer, primary_key = True)
     nome = db.Column(db.String(100))
     endereco = db.Column(db.String(500))
     email = db.Column(db.String(100))
@@ -41,7 +46,13 @@ class Empreendedor(db.Model, Pessoa):
     perfil= db.Column(db.String(100))
  
     def __init__(self, nome ,whatsapp, endereco, email, cnpj = '', perfil = ''):
-        super().__init__(nome ,whatsapp, endereco, email)
+        # super().__init__(nome ,whatsapp, endereco, email)
+        self.nome = nome
+        self.whatsapp = whatsapp
+        self.endereco = endereco
+        self.email = email
+        # self.hash_pwd = hash_pwd
+
         self.cnpj = cnpj
         self.perfil = perfil ## perfil do estabelecimento nas redes sociais
     
@@ -74,17 +85,24 @@ class Empreendedor(db.Model, Pessoa):
 
     
 
-class Candidato(db.Model, Pessoa):
+class Candidato(db.Model):
     __tablename__ = 'candidato'
-    id_candidato= db.Column(db.Integer, primary_key = True)
-    nome = db.Column(db.String(100))
-    whatsapp = db.Column(db.Integer)
-    endereco = db.Column(db.String(500))
-    email = db.Column(db.String(100))
+
+    id = db.Column(db.Integer(), primary_key = True)
+    nome = db.Column(db.String(80))
+    whatsapp = db.Column(db.Integer())
+    endereco = db.Column(db.String())
+    email = db.Column(db.String())
     
     def __init__(self, nome ,whatsapp, endereco, email):
-        super().__init__(nome ,whatsapp, endereco, email)
-    
+        # super().__init__(nome ,whatsapp, endereco, email)
+        self.nome = nome
+        self.whatsapp = whatsapp
+        self.endereco = endereco
+        self.email = email
+        # self.hash_pwd = hash_pwd
+
+
     
     def save(self):
         db.session.add(self)
