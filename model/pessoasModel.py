@@ -39,9 +39,6 @@ class Empreendedor(db.Model):
     endereco = db.Column(db.String())
     email = db.Column(db.String())
 
-    nome = db.Column(db.String(100))
-    endereco = db.Column(db.String(500))
-    email = db.Column(db.String(100))
     cnpj= db.Column(db.String(100))
     perfil= db.Column(db.String(100))
  

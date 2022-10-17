@@ -6,6 +6,7 @@ class Vaga(db.model):
     nome = db.Column(db.String(100))
     descricao_vaga = db.Column(db.String(500))
     valor_da_vaga = db.Column(db.Integer)
+    endereco = db.Column(db.String(500))
     empreendedor_id = db.Column(db.Integer, db.ForeignKey('empreendedor.id_empreendedor') )
     empreendedor = db.relationship('Empreendedor', foreign_keys = empreendedor_id)
 
