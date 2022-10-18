@@ -19,14 +19,45 @@ class Empreendedor(Resource):
             return {'erro' : 'Não existe registro desse perfil'}, 404
 
     def post(self, id):
-        corpo = request.get_json( force=True )
+
+        empreendedor = EmpreendedorModel.find_by_id(id)
+        if empreendedor:
+            return {"erro" : "Já existe um empreendedor com esse registro."}, 400
+        else:
+            corpo = request.get_json( force=True )
+
+            empreendedor = EmpreendedorModel(id ,**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
+            try:
+                empreendedor.save()
+            except:
+                return {"erro":"Ocorreu um erro interno ao tentar inserir um empreendedor (DB)"}, 500
+            
+
+            return empreendedor.toDict(), 201
+        
+    def put(self, id):
+        empreendedor = EmpreendedorModel.find_by_id(id)
+        if empreendedor:
+            corpo = request.get_json(force=True)
+            try:
+                empreendedor.update(**corpo)
+            except:
+                {'erro' : 'Falha ao atualizar os dados de registro do empreendedor.'}, 500
+        else:
+            {"erro" : "Registro de empreendedor não encontrado."}, 400
+
+        return empreendedor.toDict(), 200
+
+    def delete(self, id):
+        empreendedor = EmpreendedorModel.find_by_id(id)
+
+        if empreendedor:
+            try:
+                empreendedor.delete()
+            except:
+                return {"erro" : "Falha ao deletar registro de empreendedor da base."}, 500
+            return {'erro' : 'Registro de empreendedor deletado da base.'}, 200
+        
+        return {'erro' : "Regsitro de empreendedor não encontrado na base"}, 400
 
         
-        empreendedor = EmpreendedorModel(id ,**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
-        try:
-            empreendedor.save()
-        except:
-            return {"erro":"Ocorreu um erro interno ao tentar inserir um aluno (DB)"}, 500
-        
-
-        return empreendedor.toDict(), 201

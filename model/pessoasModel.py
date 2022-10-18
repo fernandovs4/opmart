@@ -72,7 +72,12 @@ class EmpreendedorModel(db.Model):
     
     @classmethod
     def find_by_id(cls, id):
-        return cls.query.filter_by(id = id).first()
+        qry = cls.query.filter_by(id = id)
+        try:
+            result = qry.first()
+        except:
+            return None
+        return result
 
     @classmethod
     def search_all(cls):
@@ -120,7 +125,12 @@ class CandidatoModel(db.Model):
 
     @classmethod
     def find_by_id(cls, id):
-        return cls.query.filter_by(id = id)
+        qry = cls.query.filter_by(id = id)
+        try:
+            result = qry.first()
+        except:
+            return None
+        return result
 
     @classmethod
     def search_all(cls):
