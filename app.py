@@ -3,7 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
 from pathlib import Path
 from model.sql_alqhemy_para_db import db
-from model.pessoasModel import Empreendedor
+# from model.pessoasModel import 
+from resource.empreendedor_rotas import Empreendedor
 
 
 
@@ -11,7 +12,7 @@ from model.pessoasModel import Empreendedor
 FILE = Path(__file__).resolve()
 src_folder = FILE.parents[0]
 # caminho para a base
-rel_arquivo_db = Path('model/biblioteca.db')
+rel_arquivo_db = Path('model/opmart.db')
 caminho_arq_db = src_folder / rel_arquivo_db
 
 

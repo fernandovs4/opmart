@@ -31,19 +31,20 @@ from model.sql_alqhemy_para_db import db
 
 
 
-class Empreendedor(db.Model):
+class EmpreendedorModel(db.Model):
     __tablename__ = 'empreendedor'
     id = db.Column(db.Integer(), primary_key = True)
     nome = db.Column(db.String(80))
-    whatsapp = db.Column(db.Integer())
+    whatsapp = db.Column(db.String())
     endereco = db.Column(db.String())
     email = db.Column(db.String())
 
     cnpj= db.Column(db.String(100))
     perfil= db.Column(db.String(100))
  
-    def __init__(self, nome ,whatsapp, endereco, email, cnpj = '', perfil = ''):
+    def __init__(self, id, nome ,whatsapp, endereco, email, cnpj = '', perfil = ''):
         # super().__init__(nome ,whatsapp, endereco, email)
+        self.id = id
         self.nome = nome
         self.whatsapp = whatsapp
         self.endereco = endereco
@@ -71,18 +72,18 @@ class Empreendedor(db.Model):
     
     @classmethod
     def find_by_id(cls, id):
-        return cls.query.filter_by(id = id)
+        return cls.query.filter_by(id = id).first()
 
     @classmethod
     def search_all(cls):
         return cls.query.all()
 
     def toDict(self):
-        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email, 'perfil': self.perfil, 'cnpj': self.cnpj, 'id_empreendedor':self.id_empreendedor}
+        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email, 'perfil': self.perfil, 'cnpj': self.cnpj, 'id_empreendedor':self.id}
 
     
 
-class Candidato(db.Model):
+class CandidatoModel(db.Model):
     __tablename__ = 'candidato'
 
     id = db.Column(db.Integer(), primary_key = True)
@@ -126,23 +127,4 @@ class Candidato(db.Model):
         return cls.query.all()
     
     def toDict(self):
-        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email,}
-
-    
-    
-
-
-
-
-
-
- 
-
-    
-
-        
-
-
-
-
-
+        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email, 'id' : self.id}
