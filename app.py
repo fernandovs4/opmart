@@ -5,7 +5,7 @@ from pathlib import Path
 from model.sql_alqhemy_para_db import db
 # from model.pessoasModel import 
 from resource.empreendedor_rotas import Empreendedor
-
+from resource.candidato_rotas import Candidato
 
 
 # Resistente a sistema operacional
@@ -33,6 +33,7 @@ def hello_world():
     return {"Estado": "Hello world"}, 200
 
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
+api.add_resource(Candidato, '/candidato/<int:id>')
 
 if __name__ == '__main__':
     db.init_app(app)

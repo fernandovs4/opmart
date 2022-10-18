@@ -98,8 +98,9 @@ class CandidatoModel(db.Model):
     endereco = db.Column(db.String())
     email = db.Column(db.String())
     
-    def __init__(self, nome ,whatsapp, endereco, email):
+    def __init__(self, id, nome, whatsapp, endereco, email):
         # super().__init__(nome ,whatsapp, endereco, email)
+        self.id = id
         self.nome = nome
         self.whatsapp = whatsapp
         self.endereco = endereco
