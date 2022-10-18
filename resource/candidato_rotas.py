@@ -2,6 +2,17 @@ from flask_restful import Resource
 from flask import request, jsonify
 from model.pessoasModel import CandidatoModel
 
+class ListaCandidato(Resource):
+    def get(self):
+        todos_candidatos  = CandidatoModel.search_all()
+    
+        dic = {}
+        for candidato in todos_candidatos:
+            dic[candidato.id] = candidato.toDict()
+
+        return dic
+
+
 class Candidato(Resource):
 
     def get(self, id):

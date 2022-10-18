@@ -5,7 +5,7 @@ from pathlib import Path
 from model.sql_alqhemy_para_db import db
 # from model.pessoasModel import 
 from resource.empreendedor_rotas import Empreendedor, ListaEmpreendedor
-from resource.candidato_rotas import Candidato
+from resource.candidato_rotas import Candidato, ListaCandidato
 
 
 # Resistente a sistema operacional
@@ -35,6 +35,7 @@ def hello_world():
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
 api.add_resource(ListaEmpreendedor, '/empreendedor')
 api.add_resource(Candidato, '/candidato/<int:id>')
+api.add_resource(ListaCandidato, '/candidato')
 
 if __name__ == '__main__':
     db.init_app(app)
