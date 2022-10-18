@@ -4,7 +4,7 @@ from flask_restful import Api
 from pathlib import Path
 from model.sql_alqhemy_para_db import db
 # from model.pessoasModel import 
-from resource.empreendedor_rotas import Empreendedor
+from resource.empreendedor_rotas import Empreendedor, ListaEmpreendedor
 from resource.candidato_rotas import Candidato
 
 
@@ -33,6 +33,7 @@ def hello_world():
     return {"Estado": "Hello world"}, 200
 
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
+api.add_resource(ListaEmpreendedor, '/empreendedor')
 api.add_resource(Candidato, '/candidato/<int:id>')
 
 if __name__ == '__main__':

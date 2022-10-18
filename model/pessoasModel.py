@@ -85,7 +85,7 @@ class EmpreendedorModel(db.Model):
         return cls.query.all()
 
     def toDict(self):
-        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email, 'perfil': self.perfil, 'cnpj': self.cnpj, 'id_empreendedor':self.id}
+        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email, 'perfil': self.perfil, 'cnpj': self.cnpj}
 
     
 
@@ -139,4 +139,4 @@ class CandidatoModel(db.Model):
         return cls.query.all()
     
     def toDict(self):
-        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email, 'id' : self.id}
+        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email}

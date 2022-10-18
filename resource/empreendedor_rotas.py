@@ -2,7 +2,15 @@ from flask_restful import Resource
 from flask import request, jsonify
 from model.pessoasModel import EmpreendedorModel
 
+class ListaEmpreendedor(Resource):
+    def get(self):
+        todos_empreendedores  = EmpreendedorModel.search_all()
+    
+        dic = {}
+        for empreendedor in todos_empreendedores:
+            dic[empreendedor.id] = empreendedor.toDict()
 
+        return dic
 
 
 class Empreendedor(Resource):
