@@ -62,12 +62,13 @@ class EmpreendedorModel(db.Model):
         db.session.delete(self)
         db.session.commit()
     
-    def update(self, novo_nome = None, novo_whatsapp = None, novo_endereco = None, novo_email = None, novo_perfil = None ):
-        if novo_nome != None : self.nome = novo_nome
-        if novo_whatsapp != None : self.whatsapp = novo_whatsapp
-        if novo_endereco != None : self.endereco = novo_endereco
-        if novo_email != None : self.email = novo_email
-        if novo_perfil != None : self.perfil = novo_perfil
+    def update(self, nome = None, whatsapp = None, endereco = None, email = None, perfil = None, cnpj = None):
+        if self.nome != None: self.nome = nome
+        if self.whatsapp != None: self.whatsapp = whatsapp
+        if self.endereco != None: self.endereco = endereco
+        if self.email != None: self.email = email
+        if self.perfil != None: self.perfil = perfil
+        if self.cnpj != None: self.cpnj = cnpj
 
     
     @classmethod
@@ -112,10 +113,10 @@ class CandidatoModel(db.Model):
         db.session.commit()
     
     def update(self,nome = None, whatsapp = None, endereco = None, email = None ):
-        if nome != None: self.nome = nome
-        if whatsapp != None: self.whatsapp = whatsapp
-        if endereco != None: self.endereco = endereco
-        if email != None: self.email = email
+        self.nome = nome
+        self.whatsapp = whatsapp
+        self.endereco = endereco
+        self.email = email
 
     def delete(self):
         db.session.delete(self)

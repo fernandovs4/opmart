@@ -37,14 +37,18 @@ class Empreendedor(Resource):
         
     def put(self, id):
         empreendedor = EmpreendedorModel.find_by_id(id)
+       
         if empreendedor:
             corpo = request.get_json(force=True)
+     
             try:
                 empreendedor.update(**corpo)
+             
+                empreendedor.save()
             except:
-                {'erro' : 'Falha ao atualizar os dados de registro do empreendedor.'}, 500
+                return {'erro' : 'Falha ao atualizar os dados de registro do empreendedor.'}, 500
         else:
-            {"erro" : "Registro de empreendedor não encontrado."}, 400
+            return {"erro" : "Registro de empreendedor não encontrado."}, 400
 
         return empreendedor.toDict(), 200
 
@@ -56,7 +60,7 @@ class Empreendedor(Resource):
                 empreendedor.delete()
             except:
                 return {"erro" : "Falha ao deletar registro de empreendedor da base."}, 500
-            return {'erro' : 'Registro de empreendedor deletado da base.'}, 200
+            return {'mensagem' : 'Registro de empreendedor deletado da base.'}, 200
         
         return {'erro' : "Regsitro de empreendedor não encontrado na base"}, 400
 
