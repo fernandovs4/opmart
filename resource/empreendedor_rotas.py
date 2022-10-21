@@ -12,6 +12,17 @@ class ListaEmpreendedor(Resource):
 
         return dic
 
+    def post(self):
+        corpo = request.get_json( force=True )
+
+        empreendedor = EmpreendedorModel(**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
+        try:
+            empreendedor.save()
+        except:
+            return {"erro":"Ocorreu um erro interno ao tentar inserir um empreendedor na base."}, 500
+
+        return empreendedor.toDict(), 201
+
 
 class Empreendedor(Resource):
 
@@ -24,7 +35,7 @@ class Empreendedor(Resource):
         if empreendedor:
             return empreendedor.toDict(), 200
         else: 
-            return {'erro' : 'Não existe registro desse perfil'}, 404
+            return {'erro' : 'Não existe registro desse perfil.'}, 404
 
     def post(self, id):
 
@@ -56,7 +67,7 @@ class Empreendedor(Resource):
             except:
                 return {'erro' : 'Falha ao atualizar os dados de registro do empreendedor.'}, 500
         else:
-            return {"erro" : "Registro de empreendedor não encontrado."}, 400
+            return {"erro" : "Registro de empreendedor não encontrado."}, 404
 
         return empreendedor.toDict(), 200
 
@@ -70,6 +81,6 @@ class Empreendedor(Resource):
                 return {"erro" : "Falha ao deletar registro de empreendedor da base."}, 500
             return {'mensagem' : 'Registro de empreendedor deletado da base.'}, 200
         
-        return {'erro' : "Regsitro de empreendedor não encontrado na base"}, 400
+        return {'erro' : "Regsitro de empreendedor não encontrado na base"}, 404
 
         

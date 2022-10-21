@@ -12,6 +12,17 @@ class ListaCandidato(Resource):
 
         return dic
 
+    def post(self):
+        corpo = request.get_json( force=True )
+
+        candidato = CandidatoModel(**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
+        try:
+            candidato.save()
+        except:
+            return {"erro":"Ocorreu um erro interno ao tentar inserir um candidato na base."}, 500
+
+        return candidato.toDict(), 201
+
 
 class Candidato(Resource):
 
@@ -26,22 +37,22 @@ class Candidato(Resource):
         else: 
             return {'erro' : 'Não existe registro desse perfil'}, 404
 
-    def post(self, id):
+    # def post(self, id):
 
-        candidato = CandidatoModel.find_by_id(id)
-        if candidato:
-            return {"erro" : "Já existe um candidato com esse registro."}, 400
-        else:
-            corpo = request.get_json( force=True )
+    #     candidato = CandidatoModel.find_by_id(id)
+    #     if candidato:
+    #         return {"erro" : "Já existe um candidato com esse registro."}, 400
+    #     else:
+    #         corpo = request.get_json( force=True )
 
-            candidato = CandidatoModel(id ,**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
-            try:
-                candidato.save()
-            except:
-                return {"erro":"Ocorreu um erro interno ao tentar inserir um candidato (DB)"}, 500
+    #         candidato = CandidatoModel(id ,**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
+    #         try:
+    #             candidato.save()
+    #         except:
+    #             return {"erro":"Ocorreu um erro interno ao tentar inserir um candidato (DB)"}, 500
             
 
-            return candidato.toDict(), 201
+    #         return candidato.toDict(), 201
         
     def put(self, id):
         candidato = CandidatoModel.find_by_id(id)
@@ -56,7 +67,7 @@ class Candidato(Resource):
             except:
                 return {'erro' : 'Falha ao atualizar os dados de registro do candidato.'}, 500
         else:
-            return {"erro" : "Registro de candidato não encontrado."}, 400
+            return {"erro" : "Registro de candidato não encontrado."}, 404
 
         return candidato.toDict(), 200
 
@@ -70,4 +81,4 @@ class Candidato(Resource):
                 return {"erro" : "Falha ao deletar registro de candidato da base."}, 500
             return {'mensagem' : 'Registro de candidato deletado da base.'}, 200
         
-        return {'erro' : "Regsitro de candidato não encontrado na base"}, 400
+        return {'erro' : "Regsitro de candidato não encontrado na base"}, 404

@@ -1,8 +1,8 @@
 from sqlalchemy import ForeignKey
 from model.sql_alqhemy_para_db import db
 
-class Vaga(db.model):
-    id_vaga = db.Column(db.Integer, primary_key = True)
+class VagaModel(db.model):
+    id = db.Column(db.Integer, primary_key = True)
     nome = db.Column(db.String(100))
     descricao_vaga = db.Column(db.String(500))
     valor_da_vaga = db.Column(db.Integer)
@@ -32,7 +32,12 @@ class Vaga(db.model):
         if novo_valor_vaga != None: self.valor_da_vaga = novo_valor_vaga
     @classmethod
     def find_by_id(cls, id):
-        return cls.query.filter_by(id = id)
+        qry = cls.query.filter_by(id = id)
+        try:
+            result = qry.first()
+        except:
+            return None
+        return result
     
     @classmethod
     def search_all(cls):

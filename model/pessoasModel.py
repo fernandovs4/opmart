@@ -42,9 +42,9 @@ class EmpreendedorModel(db.Model):
     cnpj= db.Column(db.String(100))
     perfil= db.Column(db.String(100))
  
-    def __init__(self, id, nome ,whatsapp, endereco, email, cnpj = '', perfil = ''):
+    def __init__(self, nome ,whatsapp, endereco, email, cnpj = '', perfil = ''):
         # super().__init__(nome ,whatsapp, endereco, email)
-        self.id = id
+        # self.id = id
         self.nome = nome
         self.whatsapp = whatsapp
         self.endereco = endereco
@@ -98,9 +98,9 @@ class CandidatoModel(db.Model):
     endereco = db.Column(db.String())
     email = db.Column(db.String())
     
-    def __init__(self, id, nome, whatsapp, endereco, email):
+    def __init__(self, nome, whatsapp, endereco, email):
         # super().__init__(nome ,whatsapp, endereco, email)
-        self.id = id
+        # self.id = id
         self.nome = nome
         self.whatsapp = whatsapp
         self.endereco = endereco
