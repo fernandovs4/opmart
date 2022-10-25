@@ -32,7 +32,7 @@ def create_tables():
 
 @app.route("/")
 def hello_world():
-    return {"Estado": "Hello world"}, 200
+    return {"Estado": "Servidor ativo"}, 200
 
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
 api.add_resource(ListaEmpreendedor, '/empreendedor')
