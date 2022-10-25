@@ -37,22 +37,7 @@ class Candidato(Resource):
         else: 
             return {'erro' : 'Não existe registro desse perfil'}, 404
 
-    # def post(self, id):
 
-    #     candidato = CandidatoModel.find_by_id(id)
-    #     if candidato:
-    #         return {"erro" : "Já existe um candidato com esse registro."}, 400
-    #     else:
-    #         corpo = request.get_json( force=True )
-
-    #         candidato = CandidatoModel(id ,**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
-    #         try:
-    #             candidato.save()
-    #         except:
-    #             return {"erro":"Ocorreu um erro interno ao tentar inserir um candidato (DB)"}, 500
-            
-
-    #         return candidato.toDict(), 201
         
     def put(self, id):
         candidato = CandidatoModel.find_by_id(id)

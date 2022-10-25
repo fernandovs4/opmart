@@ -1,22 +1,27 @@
 from sqlalchemy import ForeignKey
 from model.sql_alqhemy_para_db import db
+from model.pessoasModel import EmpreendedorModel
 
-class VagaModel(db.model):
+
+
+class VagaModel(db.Model):
+    __tablename__ = 'vaga'
+
     id = db.Column(db.Integer, primary_key = True)
     nome = db.Column(db.String(100))
-    descricao_vaga = db.Column(db.String(500))
-    valor_da_vaga = db.Column(db.Integer)
+    descricao = db.Column(db.String(500))
+    valor = db.Column(db.Integer)
     endereco = db.Column(db.String(500))
-    empreendedor_id = db.Column(db.Integer, db.ForeignKey('empreendedor.id_empreendedor') )
-    empreendedor = db.relationship('Empreendedor', foreign_keys = empreendedor_id)
+    empreendedor_id = db.Column(db.Integer, db.ForeignKey('empreendedor.id') )
+    empreendedor = db.relationship('EmpreendedorModel', foreign_keys = empreendedor_id)
 
 
-    def __init__(self, nome ,  descricao_vaga, valor_da_vaga,  empreendedor_id, trabalhador_id ):
+    def __init__(self, nome, descricao, valor, endereco, empreendedor_id):
         self.nome = nome
-        self.descricao_vaga = descricao_vaga
-        self.valor_da_vaga = valor_da_vaga
+        self.descricao = descricao
+        self.valor = valor
+        self.endereco = endereco
         self.empreendedor_id = empreendedor_id
-        self.trabalhador_id = trabalhador_id
     
     def save(self):
         db.session.add(self)
@@ -26,10 +31,12 @@ class VagaModel(db.model):
         db.session.delete(self)
         db.session.commit()
     
-    def update(self, novo_nome = None, nova_descricao_vaga = None, novo_valor_vaga = None):
-        if novo_nome != None : self.nome = novo_nome
-        if nova_descricao_vaga != None:  self.descricao_vaga = nova_descricao_vaga
-        if novo_valor_vaga != None: self.valor_da_vaga = novo_valor_vaga
+    def update(self, nome = None, descricao = None, valor = None, endereco = None):
+        if nome != None : self.nome = nome
+        if descricao != None:  self.descricao = descricao
+        if valor != None: self.valor = valor
+        if endereco != None: self.endereco = endereco
+        
     @classmethod
     def find_by_id(cls, id):
         qry = cls.query.filter_by(id = id)
@@ -44,4 +51,4 @@ class VagaModel(db.model):
         return cls.query.all()
 
     def toDict(self):
-        return {'nome': self.nome, ' descricao_vaga' : self.descricao_vaga, 'valor_vaga': self.valor_da_vaga, 'empreendedor_id': self.empreendedor_id, 'trabalhador_id': self.trabalhador_id}
+        return {'nome': self.nome, ' descricao' : self.descricao, 'valor_vaga': self.valor, 'empreendedor_id': self.empreendedor_id}

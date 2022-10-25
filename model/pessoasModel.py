@@ -99,13 +99,10 @@ class CandidatoModel(db.Model):
     email = db.Column(db.String())
     
     def __init__(self, nome, whatsapp, endereco, email):
-        # super().__init__(nome ,whatsapp, endereco, email)
-        # self.id = id
         self.nome = nome
         self.whatsapp = whatsapp
         self.endereco = endereco
         self.email = email
-        # self.hash_pwd = hash_pwd
 
 
     
