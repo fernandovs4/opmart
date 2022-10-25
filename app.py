@@ -7,6 +7,7 @@ from resource.empreendedor_rotas import Empreendedor, ListaEmpreendedor
 from resource.candidato_rotas import Candidato, ListaCandidato
 from resource.vaga_rotas import Vaga, ListaVaga
 from resource.candidatura_rotas import Candidato_id_vagas
+from flask_cors import CORS
 
 
 
@@ -19,6 +20,7 @@ caminho_arq_db = src_folder / rel_arquivo_db
 
 
 app = Flask(__name__)
+
 #https://docs.sqlalchemy.org/en/14/core/engines.html
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{caminho_arq_db.resolve()}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
