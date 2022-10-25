@@ -36,6 +36,15 @@ class VagaModel(db.Model):
         if descricao != None:  self.descricao = descricao
         if valor != None: self.valor = valor
         if endereco != None: self.endereco = endereco
+
+    @classmethod
+    def search_by_empreendedor_id(cls, id_empreendedor):
+        qry = cls.query.filter_by(empreendedor_id = id_empreendedor)
+        try:
+            result = qry.all()
+        except:
+            return None
+        return result
         
     @classmethod
     def find_by_id(cls, id):

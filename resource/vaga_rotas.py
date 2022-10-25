@@ -6,11 +6,14 @@ class ListaVaga(Resource):
     def get(self):
         todas_vagas  = VagaModel.search_all()
     
-        dic = {}
-        for vaga in todas_vagas:
-            dic[vaga.id] = vaga.toDict()
+        if todas_vagas:
+            dic = {}
+            for vaga in todas_vagas:
+                dic[vaga.id] = vaga.toDict()
 
-        return dic
+            return dic, 200
+        else: 
+            return {"erro" : "Ainda não há vagas cadastradas"}, 404
 
     def post(self):
         corpo = request.get_json( force=True )
@@ -63,9 +66,22 @@ class Vaga(Resource):
             try:
                 vaga.delete()
             except:
-                return {"erro" : 'Falha ao deletar registro da vaga da base.'}
+                return {"erro" : 'Falha ao deletar registro da vaga da base.'}, 500
             
             return {'mensagem' : 'Registro da vaga deletado da base.'}, 200
 
         return {'erro' : 'Registro da vaga não encontrado na base.'}, 404
         
+
+class Empreendedor_id_vagas(Resource):
+
+    def get(self, id_empreendedor):
+        vagas_do_empreendedor  = VagaModel.search_by_empreendedor_id(id_empreendedor= id_empreendedor)
+        if vagas_do_empreendedor:
+            dic = {}
+            for vaga in vagas_do_empreendedor:
+                dic[vaga.id] = vaga.toDict()
+
+            return dic, 200
+        else:
+            return {"erro", "Não há vagas cadastradas no sistema. Cadastre novas vagas para que apareçam aqui."}, 404

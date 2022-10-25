@@ -1,13 +1,18 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
 from pathlib import Path
 from model.sql_alqhemy_para_db import db
 from resource.empreendedor_rotas import Empreendedor, ListaEmpreendedor
 from resource.candidato_rotas import Candidato, ListaCandidato
+<<<<<<< HEAD
 from resource.vaga_rotas import Vaga, ListaVaga
 from resource.candidatura_rotas import Candidato_id_vagas
 from flask_cors import CORS
+=======
+from resource.vaga_rotas import Vaga, ListaVaga, Empreendedor_id_vagas
+from resource.candidatura_rotas import Candidato_id_vagas, Empreendedor_id_vaga_id_candidatos, Candidato_id_vaga_id
+>>>>>>> 08129cff10bcaf9ee6df855224a8443d587040d9
 
 
 
@@ -34,7 +39,7 @@ def create_tables():
 
 @app.route("/")
 def hello_world():
-    return {"Estado": "Hello world"}, 200
+    return {"Estado": "Servidor ativo"}, 200
 
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
 api.add_resource(ListaEmpreendedor, '/empreendedor')
@@ -43,6 +48,9 @@ api.add_resource(ListaCandidato, '/candidato')
 api.add_resource(Vaga, '/vaga/<int:id>')
 api.add_resource(ListaVaga, '/vaga')
 api.add_resource(Candidato_id_vagas, '/candidato/<int:id>/vagas')
+api.add_resource(Candidato_id_vaga_id, '/candidato/<int:id_candidato>/vaga/<int:id_vaga>')
+api.add_resource(Empreendedor_id_vagas, '/empreendedor/<int:id_empreendedor>/vagas')
+api.add_resource(Empreendedor_id_vaga_id_candidatos, '/empreendedor/<int:id_empreendedor>/vaga/<int:id_vaga>/candidatos')
 
 
 if __name__ == '__main__':
