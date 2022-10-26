@@ -17,8 +17,8 @@ class Candidato_id_vagas(Resource):
             dic = {}
             for candidatura in candidaturas:
                 vaga = VagaModel.find_by_id(id = candidatura.vaga_id)
-                dic[vaga.id] = vaga.toDict()
-
+                if not None:
+                    dic[vaga.id] = vaga.toDict()
             return dic
         else: 
             return {'erro' : 'O candidato ainda não realizou inscrições.'}, 404
@@ -44,7 +44,7 @@ class Candidato_id_vagas(Resource):
 class Candidato_id_vaga_id(Resource):
 
     def delete(self, id_candidato, id_vaga):
-        candidatura = CandidaturaModel.find_candidatura(id_candidato= id_candidato, id_vaga= id_vaga)
+        candidatura = CandidaturaModel.find_candidatura(id_candidato= id_candidato, vaga_id = id_vaga)
         if candidatura:
             try:
                 candidatura.delete()
