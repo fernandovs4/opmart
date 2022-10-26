@@ -5,7 +5,7 @@ from pathlib import Path
 from model.sql_alqhemy_para_db import db
 from resource.empreendedor_rotas import Empreendedor, ListaEmpreendedor
 from resource.candidato_rotas import Candidato, ListaCandidato
-from resource.vaga_rotas import Vaga, ListaVaga, Empreendedor_id_vagas
+from resource.vaga_rotas import Vaga, ListaVaga, Empreendedor_id_vagas, Empreendedor_id_vaga_id
 from resource.candidatura_rotas import Candidato_id_vagas, Empreendedor_id_vaga_id_candidatos, Candidato_id_vaga_id
 from flask_cors import CORS
 
@@ -46,7 +46,7 @@ api.add_resource(Candidato_id_vagas, '/candidato/<int:id>/vagas')
 api.add_resource(Candidato_id_vaga_id, '/candidato/<int:id_candidato>/vaga/<int:id_vaga>')
 api.add_resource(Empreendedor_id_vagas, '/empreendedor/<int:id_empreendedor>/vagas')
 api.add_resource(Empreendedor_id_vaga_id_candidatos, '/empreendedor/<int:id_empreendedor>/vaga/<int:id_vaga>/candidatos')
-
+api.add_resource(Empreendedor_id_vaga_id, '/empreendedor/<int:id_empreendedor>/vaga/<int:id_vaga>/')
 
 if __name__ == '__main__':
     db.init_app(app)
