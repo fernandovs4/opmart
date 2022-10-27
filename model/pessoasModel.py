@@ -63,12 +63,12 @@ class EmpreendedorModel(db.Model):
         db.session.commit()
     
     def update(self, nome = None, whatsapp = None, endereco = None, email = None, perfil = None, cnpj = None):
-        if self.nome != None: self.nome = nome
-        if self.whatsapp != None: self.whatsapp = whatsapp
-        if self.endereco != None: self.endereco = endereco
-        if self.email != None: self.email = email
-        if self.perfil != None: self.perfil = perfil
-        if self.cnpj != None: self.cpnj = cnpj
+        if nome != None: self.nome = nome
+        if whatsapp != None: self.whatsapp = whatsapp
+        if endereco != None: self.endereco = endereco
+        if email != None: self.email = email
+        if perfil != None: self.perfil = perfil
+        if cnpj != None: self.cpnj = cnpj
 
     
     @classmethod
@@ -95,33 +95,32 @@ class CandidatoModel(db.Model):
     id = db.Column(db.Integer(), primary_key = True)
     nome = db.Column(db.String(80))
     whatsapp = db.Column(db.Integer())
-    endereco = db.Column(db.String())
-    email = db.Column(db.String())
+    endereco = db.Column(db.String(100))
+    email = db.Column(db.String(40))
+    descricao = db.Column(db.String(500))
     
-    def __init__(self, nome, whatsapp, endereco, email):
+    def __init__(self, nome, whatsapp, endereco, email, descricao = ''):
         self.nome = nome
         self.whatsapp = whatsapp
         self.endereco = endereco
         self.email = email
+        self.descricao = descricao
 
-
-    
     def save(self):
         db.session.add(self)
         db.session.commit()
     
-    def update(self,nome = None, whatsapp = None, endereco = None, email = None ):
-        self.nome = nome
-        self.whatsapp = whatsapp
-        self.endereco = endereco
-        self.email = email
+    def update(self,nome = None, whatsapp = None, endereco = None, email = None, descricao = None):
+        if not (nome == None or nome == ''): self.nome = nome
+        if not (whatsapp == None or whatsapp == ''): self.whatsapp = whatsapp
+        if not (endereco == None or endereco == ''): self.endereco = endereco
+        if not (email == None or email == ''): self.email = email
+        if not (nome == None or nome == ''): self.descricao = descricao
 
     def delete(self):
         db.session.delete(self)
         db.session.commit()
     
-
-
     @classmethod
     def find_by_id(cls, id):
         qry = cls.query.filter_by(id = id)
@@ -136,4 +135,4 @@ class CandidatoModel(db.Model):
         return cls.query.all()
     
     def toDict(self):
-        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email}
+        return {'nome': self.nome, 'whatsapp': self.whatsapp, 'endereco': self.endereco, 'email': self.email, 'descricao' : self.descricao}
