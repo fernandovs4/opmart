@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
 from pathlib import Path
@@ -20,7 +20,7 @@ caminho_arq_db = src_folder / rel_arquivo_db
 
 
 app = Flask(__name__)
-
+CORS(app)
 #https://docs.sqlalchemy.org/en/14/core/engines.html
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{caminho_arq_db.resolve()}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -32,9 +32,12 @@ def create_tables():
     db.create_all()
 
 
-@app.route("/")
+@app.route("/") #home
 def hello_world():
-    return {"Estado": "Servidor ativo"}, 200
+    return render_template('home.html')
+
+
+
 
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
 api.add_resource(ListaEmpreendedor, '/empreendedor')
@@ -50,4 +53,5 @@ api.add_resource(Empreendedor_id_vaga_id, '/empreendedor/<int:id_empreendedor>/v
 
 if __name__ == '__main__':
     db.init_app(app)
+ 
     app.run(debug= True)
