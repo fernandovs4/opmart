@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="templates/css/login_empreendedor.css" rel="stylesheet" >
+    <link href="{{url_for('static', filename = 'css/login_empreendedor.css')}}" rel="stylesheet" >
 </head>
 <body>
 
@@ -21,7 +21,7 @@
           <form class="login-form">
             <input type="text" placeholder="email"/>
             <input type="password" placeholder="senha"/>
-            <a href="home_candidato.html">Login</a>
+            <a href="home_candidato">Login</a>
             <p class="message">Not registered? <a href="#">Create an account</a></p>
           </form>
         </div>
