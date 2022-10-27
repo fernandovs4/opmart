@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
 from pathlib import Path
@@ -32,12 +32,10 @@ def create_tables():
     db.create_all()
 
 
-@app.route("/")
+@app.route("/") #home
 def hello_world():
     return render_template('home.html')
-@app.route("/login_candidato")
-def empre():
-    return render_template('login_candidato.html')
+
 
 
 
