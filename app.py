@@ -54,8 +54,6 @@ def rota_vagas_cantidato():
     return render_template("candidato/vagas_candidato.html")
 
 
-
-
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
 api.add_resource(ListaEmpreendedor, '/empreendedor')
 api.add_resource(Candidato, '/candidato/<int:id>')
