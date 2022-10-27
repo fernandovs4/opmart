@@ -10,7 +10,8 @@ class ListaVaga(Resource):
         if todas_vagas:
             dic = {}
             for vaga in todas_vagas:
-                dic[vaga.id] = vaga.toDict()
+                if vaga:
+                    dic[vaga.id] = vaga.toDict()
 
             return dic, 200
         else: 
