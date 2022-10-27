@@ -5,17 +5,9 @@ from pathlib import Path
 from model.sql_alqhemy_para_db import db
 from resource.empreendedor_rotas import Empreendedor, ListaEmpreendedor
 from resource.candidato_rotas import Candidato, ListaCandidato
-<<<<<<< HEAD
-from resource.vaga_rotas import Vaga, ListaVaga
-from resource.candidatura_rotas import Candidato_id_vagas
-from flask_cors import CORS
-from resource.vaga_rotas import Vaga, ListaVaga, Empreendedor_id_vagas
-from resource.candidatura_rotas import Candidato_id_vagas, Empreendedor_id_vaga_id_candidatos, Candidato_id_vaga_id
-=======
 from resource.vaga_rotas import Vaga, ListaVaga, Empreendedor_id_vagas, Empreendedor_id_vaga_id
 from resource.candidatura_rotas import Candidato_id_vagas, Empreendedor_id_vaga_id_candidatos, Candidato_id_vaga_id
 from flask_cors import CORS
->>>>>>> eca8b403d8677b01f47618b2f2785879aacfb5f7
 
 
 
