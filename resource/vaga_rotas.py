@@ -1,6 +1,7 @@
 from flask_restful import Resource
 from flask import request, jsonify
 from model.vagaModel import VagaModel
+from model.candidaturaModel import CandidaturaModel
 
 class ListaVaga(Resource):
     def get(self):
@@ -85,3 +86,20 @@ class Empreendedor_id_vagas(Resource):
             return dic, 200
         else:
             return {"erro", "Não há vagas cadastradas no sistema. Cadastre novas vagas para que apareçam aqui."}, 404
+
+class Empreendedor_id_vaga_id(Resource):
+
+    def delete(self, id_empreendedor, id_vaga):
+        vagas_do_empreendedor  = VagaModel.search_by_empreendedor_id(id_empreendedor= id_empreendedor)
+        for vaga in vagas_do_empreendedor:
+            if vaga.id == id_vaga:
+                vaga = VagaModel.find_by_id(id)
+                try:
+                    vaga.delete()
+                except:
+                    return {"erro" : 'Falha ao deletar registro da vaga da base.'}, 500
+                candidaturas = CandidaturaModel.find_by_vaga_id(id= id_vaga)
+                for candidatura in candidaturas:
+                    candidatura.delete()
+                return {"mensagem" : "Vaga deletada com sucesso"}, 200
+        return {"erro" : "A vaga não pertence a esse empreendedor."}
