@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aula 09 - Portfolio</title>
-  <link rel="stylesheet" href="templates/css/perfil_candidato.css">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/perfil_candidato.css')}}">
   <script src="https://kit.fontawesome.com/d37c5443c6.js" crossorigin="anonymous"></script>
-  <script src="static/perfil.js" ></script>
+  <script src="{{url_for('static', filename = 'js_candidato/perfil_candidato.js')}}" ></script>
 
 </head>
 
@@ -47,8 +47,8 @@
 
     
         <ol>
-          <a href="vagas_candidato.html" > <h1>Minhas Vagas</h1></a>
-          <a href="config_candidato.html" > <h1>Configurações</h1></a>
+          <a href="vagas_candidato" > <h1>Minhas Vagas</h1></a>
+          <a href="config_candidato" > <h1>Configurações</h1></a>
           <!-- <li><a href="https://codepen.io/golin/full/WNOXoQb" target="_blank"> 🔮 Mentalista</a></li>
           <li><a href="https://codepen.io/golin/full/BaZYjNZ" target="_blank"> 🎬 AluraFlix</a></li>
           <li><a href="https://codepen.io/golin/full/MWoGWrJ" target="_blank"> 🏆 Tabela de Classificação</a></li>

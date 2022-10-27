@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
@@ -35,6 +36,22 @@ def create_tables():
 @app.route("/") #home
 def hello_world():
     return render_template('home.html')
+
+@app.route("/login_candidato")
+def candidato_():
+    return render_template("candidato/login_candidato.html")
+
+@app.route("/home_candidato")
+def home_cantidato():
+    return render_template("candidato/home_candidato.html")
+
+@app.route("/perfil_candidato")
+def perfil_cantidato():
+    return render_template("candidato/perfil_candidato.html")
+
+@app.route("/vagas_candidato")
+def rota_vagas_cantidato():
+    return render_template("candidato/vagas_candidato.html")
 
 
 
