@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aula 09 - Portfolio</title>
-  <link rel="stylesheet" href="{{url_for('static', filename = 'css/perfil_candidato.css')}}">
   <script src="https://kit.fontawesome.com/d37c5443c6.js" crossorigin="anonymous"></script>
   <script src="{{url_for('static', filename = 'js_candidato/perfil_candidato.js')}}" ></script>
 
@@ -20,14 +19,14 @@
     <title>Opmart</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/templatemo-eduwell-style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/owl.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/lightbox.css')}}">
 <!--
 
 TemplateMo 573 EduWell
@@ -46,7 +45,7 @@ TemplateMo 573 EduWell
                 <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
                   <a href="index.html" class="logo">
-                      <img src="assets/images/templatemo-eduwell.png" alt="EduWell Template">
+                      <img src="{{url_for('static', filename = 'images/templatemo-eduwell.png')}}" alt="EduWell Template">
                   </a>
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
@@ -61,8 +60,7 @@ TemplateMo 573 EduWell
                             <li><a href="listagem_vagas.html">Feed de vagas</a></li>
                         </ul>
                     </li>
-                    <li class="scroll-to-section"><a href="">Login Usuário</a></li> 
-                    <li class="scroll-to-section"><a href="">Login empreendedor</a></li> 
+                  
                 </ul>          
                   <a class='menu-trigger'>
                       <span>Menu</span>
@@ -92,14 +90,14 @@ TemplateMo 573 EduWell
                     <li class="active">
                       <div>
                         <div class="left-content">
-                          <h4>Nome do usuário</h4>
-                          <p>Email:</p>
+                          <h4 id="nome_candidato"></h4>
+                          <p id="nome_candidato"></p>
                           <span><a href="#">Minhas Vagas</a></span>
                           <span><a href="#">Editar Perfil</a></span>
                           <span class="last-span"><a href="#">Sair</a></span>
                         </div>
                         <div class="right-image">
-                          <img src="assets/images/team-member-01.png" alt="">
+                          <img src="{{url_for('static', filename = 'images/team-member-01.png')}}">
                         </div>
                       </div>
                     </li>
@@ -117,16 +115,18 @@ TemplateMo 573 EduWell
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url_for('static', filename = 'vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/video.js"></script>
-    <script src="assets/js/slick-slider.js"></script>
-    <script src="assets/js/custom.js"></script>
+    
+  
+    <script src="{{url_for('static',filename = 'js/isotope.min.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/owl-carousel.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/lightbox.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/tabs.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/video.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/slick-slider.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/custom.js')}}"></script>
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');
@@ -174,20 +174,11 @@ TemplateMo 573 EduWell
         });
     </script>
     
-        <ol>
-          <a href="vagas_candidato" > <h1>Minhas Vagas</h1></a>
-          <a href="config_candidato" > <h1>Configurações</h1></a>
-          <!-- <li><a href="https://codepen.io/golin/full/WNOXoQb" target="_blank"> 🔮 Mentalista</a></li>
-          <li><a href="https://codepen.io/golin/full/BaZYjNZ" target="_blank"> 🎬 AluraFlix</a></li>
-          <li><a href="https://codepen.io/golin/full/MWoGWrJ" target="_blank"> 🏆 Tabela de Classificação</a></li>
-          <li><a href="https://codepen.io/golin/full/gORKEzQ" target="_blank"> 🃏 Super Trunfo</a></li>
-          <li><a href="https://codepen.io/golin/full/xxrabdp" target="_blank"> 🆔 CertifiCard</a></li> -->
-        </ol>
       </div>
 
     </main>
   </div>
   <!-- Script -->
-  <script src="app.js"></script>
+ 
 </body>
 </html>
