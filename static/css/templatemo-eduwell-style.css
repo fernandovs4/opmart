@@ -125,12 +125,12 @@ body {
 }
 
 ::selection {
-  background: #e500fa;
+  background: #AD0BCF;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #e500fa;
+  background: #AD0BCF;
   color: #fff;
 }
 
@@ -171,7 +171,7 @@ body {
 
 .white-button a {
   font-size: 13px;
-  color: #e500fa;
+  color: #AD0BCF;
   background-color: #fff;
   padding: 12px 30px;
   display: inline-block;
@@ -188,7 +188,7 @@ body {
 .text-button a {
   font-size: 14px;
   font-weight: 500;
-  color: #e500fa;
+  color: #AD0BCF;
   text-decoration: underline !important;
   transition: all .3s;
 }
@@ -232,7 +232,7 @@ section {
 
 .section-heading h4 em {
   font-style: normal;
-  color: #e500fa;
+  color: #AD0BCF;
 }
 
 .section-heading p {
@@ -405,7 +405,7 @@ header
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
   background: #fff;
-  color: #e500fa!important;
+  color: #AD0BCF!important;
   padding-left: 25px;
 }
 
@@ -545,7 +545,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #e500fa;
+  color: #AD0BCF;
 }
 
 @media (max-width: 1200px) {
@@ -564,7 +564,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #e500fa!important;
+    color: #AD0BCF!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -622,7 +622,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #e500fa!important;
+    color: #AD0BCF!important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -732,7 +732,7 @@ section.main-banner {
 
 .main-banner .header-text h2 em {
   font-style: normal;
-  color: #e500fa;
+  color: #AD0BCF;
 }
 
 .main-banner .main-button-gradient {
@@ -788,7 +788,7 @@ services
 }
 
 .services .owl-dots .active {
-  background-color: #e500fa;
+  background-color: #AD0BCF;
 }
 
 
@@ -848,7 +848,7 @@ section.our-courses .naccs .menu div {
 }
 
 section.our-courses .naccs .menu div.active {
-  color: #e500fa;
+  color: #AD0BCF;
   border: 3px solid rgba(219,138,222,1);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
 }
@@ -1057,7 +1057,7 @@ section.testimonials:after {
 .testimonials .item span {
   font-size: 13px;
   font-weight: 700;
-  color: #e500fa;
+  color: #AD0BCF;
 }
 
 .testimonials .item img {
@@ -1082,7 +1082,7 @@ section.testimonials:after {
 }
 
 .testimonials .owl-dots .active {
-  background-color: #e500fa;
+  background-color: #AD0BCF;
 }
 
 
@@ -1145,7 +1145,7 @@ section.contact-us .contact-info h4 {
 
 section.contact-us .contact-info span {
   font-size: 15px;
-  color: #e500fa;
+  color: #AD0BCF;
   font-weight: 700;
 }
 
@@ -1234,13 +1234,13 @@ section.contact-us ul.social-icons li a {
   text-align: center;
   line-height: 44px;
   background-color: #fff;
-  color: #e500fa;
+  color: #AD0BCF;
   border-radius: 50%;
   transition: all .5s;
 }
 
 section.contact-us ul.social-icons li a:hover {
-  background-color: #e500fa;
+  background-color: #AD0BCF;
   color: #fff;
 }
 
@@ -1401,13 +1401,13 @@ section.our-team .naccs .menu div h4 {
 section.our-team .naccs .menu div span {
   font-size: 12px;
   text-transform: uppercase;
-  color: #e500fa;
+  color: #AD0BCF;
   font-weight: 700;
   display: block;
 }
 
 section.our-team .naccs .menu div.active h4 {
-  color: #e500fa;
+  color: #AD0BCF;
 }
 
 section.our-team ul.nacc {
@@ -1473,7 +1473,7 @@ section.our-team ul.nacc li .left-content span a {
 }
 
 section.our-team ul.nacc li .left-content span a:hover {
-  color: #e500fa;
+  color: #AD0BCF;
 }
 
 section.our-team ul.nacc li .left-content .last-span a {
@@ -1577,28 +1577,6 @@ section.featured-product {
   position: relative;
 }
 
-section.featured-product:before {
-  position: absolute;
-  content: '';
-  background-image: url(../images/testimonials-left-dec.png);
-  left: 0px;
-  top: -140px;
-  width: 593px;
-  height: 352px;
-  z-index: 1;
-}
-
-section.featured-product:after {
-  position: absolute;
-  content: '';
-  background-image: url(../images/testimonials-right-dec.png);
-  right: 0px;
-  bottom: -140px;
-  width: 632px;
-  height: 352px;
-  z-index: 1;
-}
-
 section.featured-product .info-item {
   border-radius: 15px;
   text-align: left;
@@ -1699,7 +1677,7 @@ section.more-info .count-area-content .count-digit {
   height: 80px;
   line-height: 80px;
   font-size: 28px;
-  color: #e500fa;
+  color: #AD0BCF;
   font-weight: 900;
   margin-bottom: -40px;
   position: relative;
@@ -1897,7 +1875,7 @@ body {
     margin: 0px 5px;
   }
   section.our-team .naccs .menu div.active img {
-    border: 3px solid #e500fa;
+    border: 3px solid #AD0BCF;
   }
   section.our-team .naccs .menu div h4,
   section.our-team .naccs .menu div span {
