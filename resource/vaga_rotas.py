@@ -17,7 +17,7 @@ class ListaVaga(Resource):
 
     def post(self):
         corpo = request.get_json( force=True )
-
+        print(corpo)
         vaga = VagaModel(**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
         try:
             vaga.save()

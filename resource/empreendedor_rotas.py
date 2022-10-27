@@ -15,7 +15,7 @@ class ListaEmpreendedor(Resource):
     def post(self):
         corpo = request.get_json( force=True )
 
-        empreendedor = EmpreendedorModel(**corpo) #AlunoModel(corpo['nome'], corpo['numero'])
+        empreendedor = EmpreendedorModel(**corpo)
         try:
             empreendedor.save()
         except:
