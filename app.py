@@ -49,6 +49,10 @@ def rota_login_empreendedor():
 def home_cantidato():
     return render_template("candidato/home_candidato.html")
 
+@app.route("/home-empreendedor")
+def rota_home_empreendedor():
+    return render_template("empreendedor/home_empreendedor.html")
+
 @app.route("/perfil-candidato")
 def perfil_cantidato():
     return render_template("candidato/perfil_candidato.html")

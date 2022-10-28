@@ -2,7 +2,8 @@
 <html lang="en">
 
   <head>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -20,6 +21,8 @@
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/templatemo-eduwell-style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/owl.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/lightbox.css')}}">
+    <script src="{{ url_for('static', filename = 'listagem_vagas.js')}}" >
+    </script>
 <!--
 
 TemplateMo 573 EduWell
@@ -81,19 +84,8 @@ https://templatemo.com/tm-573-eduwell
 
   <section class="featured-product">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3 align-self-center">
-          <div class="right-info">
-            <div class="col-lg-12">
-              <div class="info-item">
-                <div class="icon">
-                  <img src="{{url_for('static', filename = 'images/service-icon-01.png')}}" alt="">
-                </div>
-                <h4>Nome da Vaga</h4>
-                <p>Descrição da vaga.</p>
-              </div>
-            </div>
-          </div>
+      </a><div  class="row" id="feed_vagass" >
+
         </div>
       </div>
     </div>
