@@ -14,19 +14,12 @@ $(document).ready(function () {
             $("#nome_candidato").append(String(response['nome']) + "<br>");
             $("#nome_candidato").append("<p>" + String(response['email']) + "</p>");
            
-    
+            $("#form_editar").html()
         });
-
-      
-  
-   
 
 
     }
 
     // listagem das vagas
-    
-
-    
 
    )
