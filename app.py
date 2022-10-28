@@ -37,7 +37,7 @@ def create_tables():
 def hello_world():
     return render_template('home.html')
 
-@app.route("/login-usuario")
+@app.route("/login-candidato")
 def rota_login_candidato_():
     return render_template("candidato/login_candidato.html")
 
@@ -57,18 +57,25 @@ def rota_home_empreendedor():
 def perfil_cantidato():
     return render_template("candidato/perfil_candidato.html")
 
-@app.route("/vagas_candidato")
+@app.route("/vagas-candidato")
 def rota_vagas_cantidato():
     return render_template("candidato/vagas_candidato.html")
 
-@app.route("/editar_candidato")
+@app.route("/editar-candidato")
 def rota_editar_cantidato():
     return render_template("candidato/editar_candidato.html")
+
+@app.route("/detalhe-vaga")
+def rota_detalhamento_de_vaga():
+    return render_template("geral/detalhe_vaga.html")
 
 @app.route("/listagem-vagas")
 def rota_listagem_candidato():
     return render_template("geral/feed_vagas.html")
 
+@app.route("/detalhe-candidato")
+def rota_detalhamento_de_candidato():
+    return render_template("empresa/detalhe_candidato.html")
 
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
 api.add_resource(ListaEmpreendedor, '/empreendedor')
