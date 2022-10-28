@@ -12,9 +12,7 @@ $(document).ready(function () {
       
       $.ajax(settings).done(function (response) {
         console.log(response)
-        let imagem =  "<div class='icon'>\
-        <img src=" + '"'+ "{{url_for('static', filename = 'images/service-icon-01.png')}}" + '"' + " >\
-      </div>"
+       
   
  
         for (id in response) {
@@ -35,9 +33,6 @@ $(document).ready(function () {
                             </div>\
                           </div>\
                         " + "</a> "+ "</div>" 
-
-
-
 
 
 
