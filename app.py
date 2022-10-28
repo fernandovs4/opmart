@@ -77,6 +77,16 @@ def rota_listagem_candidato():
 def rota_detalhamento_de_candidato():
     return render_template("empresa/detalhe_candidato.html")
 
+@app.route("/perfil-empreendedor")
+def rota_perfil_empreendedor():
+    return render_template("empreendedor/perfil_empreendedor.html")
+
+@app.route("/vagas-empreendedor")
+def rota_vagas_empreendedor():
+    return render_template("empreendedor/vagas_empreendedor.html")
+
+
+
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
 api.add_resource(ListaEmpreendedor, '/empreendedor')
 api.add_resource(Candidato, '/candidato/<int:id>')
