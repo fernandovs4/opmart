@@ -53,18 +53,18 @@ def home_cantidato():
 def perfil_cantidato():
     return render_template("candidato/perfil_candidato.html")
 
-@app.route("/vagas_candidato")
+@app.route("/vagas-candidato")
 def rota_vagas_cantidato():
     return render_template("candidato/vagas_candidato.html")
 
-@app.route("/editar_candidato")
+@app.route("/editar-candidato")
 def rota_editar_cantidato():
     return render_template("candidato/editar_candidato.html")
 
-@app.route("/detalhe_vaga")
+@app.route("/detalhe-vaga")
 def rota_detalhamento_de_vaga():
     return render_template("geral/detalhe_vaga.html")
-    
+
 @app.route("/listagem-vagas")
 def rota_listagem_candidato():
     return render_template("geral/feed_vagas.html")
