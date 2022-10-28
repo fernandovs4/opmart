@@ -2,7 +2,8 @@
 <html lang="en">
 
   <head>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -14,29 +15,16 @@
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <script src="{{url_for('static', filename =  'js_candidato/listagem_candidato.js')}}" >
+    <script src="{{url_for('static', filename =  'listagem_vagas_destaque.js')}}" >
     </script>
     <script src="{{ url_for('static', filename = 'cadastro.js')}}" >
     </script>
     <!-- Additional CSS Files -->
-    <!-- "{{ url_for('static', filename = 'meu_script.js') }}" -->
     <link rel="stylesheet" href="{{url_for( 'static', filename = 'css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/templatemo-eduwell-style.css')}}">
     <link rel="stylesheet" href="{{ url_for('static' ,filename =  'css/owl.css')}}">
     <link rel="stylesheet" href="{{url_for('static' ,filename = 'css/lightbox.css')}}">
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-<!--
-
-TemplateMo 573 EduWell
-
-https://templatemo.com/tm-573-eduwell
-
--->
   </head>
 
 <body>
@@ -94,7 +82,7 @@ https://templatemo.com/tm-573-eduwell
         </div>
         <div class="col-lg-6">
           <div class="right-image">
-            <img src="{{url_for('static',filename='images/banner-right-image.png')}}" alt="">
+            <img src="{{url_for('static',filename='images/banner-right-image.png')}}">
           </div>
         </div>
       </div>
@@ -117,17 +105,35 @@ https://templatemo.com/tm-573-eduwell
       
         <div class="col-lg-12">
           <div class="owl-service-item owl-carousel">
+         
+            <div id="vagas_em_destaque">
+
+                 
             <div class="item">
               <div class="service-item">
-                <div class="icon" id = 'feed-col'>
-                  <img src="{{ url_for('static', filename = 'images/service-icon-01.png')}}" alt="">
+                <div class="icon">
+                  <img src="{{url_for('static', filename='/images/service-icon-02.png')}}">
                 </div>
-                <!-- <div id="feed-col" >
-                </div> -->
-               
-                 
+                <h4>Cargo da vaga</h4>
+                <p>Breve descrição.</p>
               </div>
             </div>
+
+
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="assets/images/service-icon-03.png">
+                </div>
+                <h4>Cargo da vaga</h4>
+                <p>Breve descrição da vaga.</p>
+              </div>
+            </div>
+
+
+
+            </div>
+
           </div>
         </div>
       </div>
@@ -161,8 +167,8 @@ https://templatemo.com/tm-573-eduwell
                     <li class="active">
                       <div>
                         <div class="left-image">
-                          <img src="{{url_for('static',filename='images/courses-01.jpg')}}" alt="">
-                          <div class="price"><h6>$128</h6></div>
+                          <img src="{{url_for('static',filename='images/courses-01.png')}}">
+              
                         </div>
                         <div class="right-content">
                           <h4>Problema</h4>
@@ -173,8 +179,8 @@ https://templatemo.com/tm-573-eduwell
                     <li>
                       <div>
                         <div class="left-image">
-                          <img src="{{url_for('static',filename='images/courses-02.jpg')}}" alt="">
-                          <div class="price"><h6>$156</h6></div>
+                          <img src="{{url_for('static',filename='images/courses-02.png')}}">
+                        
                         </div>
                         <div class="right-content">
                           <h4>Alternativa</h4>
@@ -185,8 +191,8 @@ https://templatemo.com/tm-573-eduwell
                     <li>
                       <div>
                         <div class="left-image">
-                          <img src="{{url_for('static',filename='images/courses-03.jpg')}}" alt="">
-                          <div class="price"><h6>$184</h6></div>
+                          <img src="{{url_for('static',filename='images/courses-03.png')}}">
+                        
                         </div>
                         <div class="right-content">
                           <h4>Solução</h4>
@@ -197,8 +203,8 @@ https://templatemo.com/tm-573-eduwell
                     <li>
                       <div>
                         <div class="left-image">
-                          <img src="{{url_for('static',filename='images/courses-04.jpg')}}" alt="">
-                          <div class="price"><h6>$76</h6></div>
+                          <img src="{{url_for('static',filename='images/courses-04.png')}}">
+                        
                         </div>
                         <div class="right-content">
                           <h4>Nossa Missão</h4>
@@ -218,19 +224,6 @@ https://templatemo.com/tm-573-eduwell
     </div>
   </section>
 
-  <section class="simple-cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 offset-lg-1">
-          <div class="left-image">
-            <img src="{{url_for('static' , filename = 'images/cta-left-image.png')}}" alt="">
-          </div>
-        </div>
-       
-      </div>
-    </div>
-  </section>
-
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="row">
@@ -243,52 +236,52 @@ https://templatemo.com/tm-573-eduwell
         <div class="col-lg-12">
           <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
             <div class="item">
-              <p>“just think about TemplateMo if you need free CSS templates for your website”</p>
-                <h4>Catherine Walk</h4>
-                <span>CEO &amp; Founder</span>
-                <img src="{{url_for('static', filename = 'images/quote.png')}}" alt="">
+              <p>“Através da OPMART consegui meu primeiro emprego na papelaria proxíma à minha casa.”</p>
+                <h4>Catarina Ferraz</h4>
+                <span>Jovem Aprendiz</span>
+                <img src="{{url_for('static', filename = 'images/quote.png')}}">
             </div>
             <div class="item">
-              <p>“think about our website first when you need free HTML templates for your website”</p>
-                <h4>David Martin</h4>
-                <span>CTO of Tech Company</span>
-                <img src="{{url_for('static', filename = 'images/quote.png')}}" alt="">
+              <p>“Perdi meu emprego durante a pandemia e através da OPMART pude voltar ao mercado de trabalho.”</p>
+                <h4>David Souza</h4>
+                <span>Montador de móveis</span>
+                <img src="{{url_for('static', filename = 'images/quote.png')}}">
             </div>
             <div class="item">
-              <p>“just think about our website wherever you need free templates for your website”</p>
-                <h4>Sophia Whity</h4>
-                <span>CEO and Co-Founder</span>
-                <img src="{{url_for('static', filename = 'images/quote.png')}}" alt="">
+              <p>“A OPMART me ajudou a encontrar um serviço dentro da minha comunidade, o que me ajuda a poder passar mais tempo com meus filhos!”</p>
+                <h4>Sandra Vieira</h4>
+                <span>Operadora de caixa</span>
+                <img src="{{url_for('static', filename = 'images/quote.png')}}">
             </div>
             <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>Helen Shiny</h4>
-                <span>Tech Officer</span>
-                <img src="{{url_for('static', filename = 'images/quote.png')}}" alt="">
+              <p>“Graças a OPMART consigo contratar entregadores para meu negócio de Delivery com muita facilidade.”</p>
+                <h4>Sérgio Santos</h4>
+                <span>Empreendedor</span>
+                <img src="{{url_for('static', filename = 'images/quote.png')}}">
             </div>
             <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>George Soft</h4>
-                <span>Gadget Reviewer</span>
-                <img src="{{url_for('static', filename = 'images/quote.png')}}" alt="">
+              <p>“Geralmente no fim do ano minha barbearia recebe muitos clientes e, por não conseguir dar conta sozinho, consegui funcionários temporários de forma online.”</p>
+                <h4>Jorge Silveira</h4>
+                <span>Barbeiro</span>
+                <img src="{{url_for('static', filename = 'images/quote.png')}}">
             </div>
             <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>Andrew Hall</h4>
-                <span>Marketing Manager</span>
-                <img src="{{url_for('static', filename='images/quote.png')}}" alt="">
+              <p>“Por meio da OPMART consegui um emprego em uma gráfica ao lado da minha casa. Graças a isso consigo pagar meu curso técnico de enferemagem.”</p>
+                <h4>Juliana Oliveira</h4>
+                <span>Estudante</span>
+                <img src="{{url_for('static', filename='images/quote.png')}}">
             </div>
             <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>Maxi Power</h4>
-                <span>Fashion Designer</span>
-                <img src="{{url_for('static' ,filename='images/quote.png')}}" alt="">
+              <p>“Aqui na plataforma consegui contratar o serviço de pedreiros, encanadores e eletricistas na reforma da minha doceria.”</p>
+                <h4>Maria Cardoso</h4>
+                <span>Confeiteira</span>
+                <img src="{{url_for('static' ,filename='images/quote.png')}}">
             </div>
             <div class="item">
-              <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                <h4>Olivia Too</h4>
-                <span>Creative Designer</span>
-                <img src="{{url_for('static', filename='images/quote.png')}}" alt="">
+              <p>“Desde que sai do Ensino Médio passei mais de 1 ano procurando uma oportunidade, mas só aqui na OPMART consegui um trabalho na mercearia do meu bairro, mesmo sem experiência profissional.”</p>
+                <h4>Gabriel Correia</h4>
+                <span>Empacotador</span>
+                <img src="{{url_for('static', filename='images/quote.png')}}">
             </div>
           </div>
         </div>
@@ -296,131 +289,11 @@ https://templatemo.com/tm-573-eduwell
     </div>
   </section>
 
-  <section class="contact-us" id="contact-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <div id="map">
-          
-           <div class="row">
-              <div class="col-lg-4">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <form id="contact">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="section-heading">
-                  <h2>Cadastro para empreendedores</h2>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="name" name="name" id="nome" placeholder="Nome" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="name" name="whatsapp" id="whatsapp" placeholder="Whatsapp" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="endereço" id="endereco" placeholder="Endereço" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="email" id="email" placeholder="Email" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="cnpj" id="cnpj"  placeholder="cnpj" required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="perfil" id="perfil" placeholder="perfil" required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit"  class="main-gradient-button">Cadastrar</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-        ###################
-        <div class="col-lg-4">
-          <form id="form_candidato">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="section-heading">
-                  <h2>Cadastro para candidatos</h2>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="name" name="name" id="nome_candidato" placeholder="Nome" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="name" name="whatsapp" id="whatsapp_candidato" placeholder="Whatsapp" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="endereço" id="endereco_candidato" placeholder="Endereço" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="email" id="email_candidato" placeholder="Email" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit"  class="main-gradient-button">Cadastrar</button>
-                </fieldset>
-              </div>
-             
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit"  class="main-gradient-button">Anunciar</button>
-                </fieldset>
-              </div>
-              <p id="sucesso" ></p>
-            </div>
-          </form>
-        
-        </div>
-       
-        <div class="col-lg-12">
-          <ul class="social-icons">
-            <li><a href="https://www.instagram.com/op.mart/"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCVLYv14wsUcfZLtnwobn5eA"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="https://twitter.com/opmartt"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://open.spotify.com/show/3SlKOQOrtK9KbFmhx9qhqx?si=_r-T9tyuT2CsCmxlppI-tw&dl_branch=1&nd=1"><i class="fa-brands fa-spotify"></i></a></li>
-            <li><a href="https://www.tiktok.com/@op.mart"><i class="fa-brands fa-tiktok"></i></a></li>
-          </ul>
-        </div>
-        <div class="col-lg-12">
-          <p class="copyright">Copyright © 2022 Opmart. 
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <script src="{{url_for('static', filename='js/isotope.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/owl-carousel.js')}}"></script>
