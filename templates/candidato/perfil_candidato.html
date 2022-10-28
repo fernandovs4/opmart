@@ -50,7 +50,7 @@ TemplateMo 573 EduWell
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
                 <ul class="nav">
-                    <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                    <li class="scroll-to-section"><a href="home-candidato" class="active">Home</a></li>
                     <li class="scroll-to-section"><a href="#courses">Sobre Nós</a></li>
                     <li class="scroll-to-section"><a href="#testimonials">Depoimentos</a></li>
                     <li class="has-sub">
@@ -164,10 +164,10 @@ TemplateMo 573 EduWell
           });
         };
 
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
+        // $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+        //   e.preventDefault();
+        //   showSection($(this).attr('href'), true);
+        // });
 
         $(window).scroll(function () {
           checkSection();

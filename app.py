@@ -37,15 +37,19 @@ def create_tables():
 def hello_world():
     return render_template('home.html')
 
-@app.route("/login_candidato")
-def candidato_():
+@app.route("/login-usuario")
+def rota_login_candidato_():
     return render_template("candidato/login_candidato.html")
 
-@app.route("/home_candidato")
+@app.route("/login-empreendedor")
+def rota_login_empreendedor():
+    return render_template("empreendedor/login_empreendedor.html")
+
+@app.route("/home-candidato")
 def home_cantidato():
     return render_template("candidato/home_candidato.html")
 
-@app.route("/perfil_candidato")
+@app.route("/perfil-candidato")
 def perfil_cantidato():
     return render_template("candidato/perfil_candidato.html")
 

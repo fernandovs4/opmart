@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opmart | Login & Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/login.css')}}">
 </head>
 <body>
 <div class="container" id="container">
@@ -19,29 +19,29 @@
 			<input type="email" placeholder="Email" />
 			<input type="Endereço" placeholder="Endereço" />
 			<input type="password" placeholder="Senha" />
-			<button>Cadastrar</button>
+			<button> <a href="home-candidato">Login</a></button>
 		</form>
 	</div>
 
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form>
 			<h1>Login</h1>
 			
 			<span></span>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Senha" />
-			<button>Entrar</button>
+			<button> <a href="home-candidato">Entrar</a> </button>
 		</form>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
-				<img src="static/images/templatemo-eduwell.png'" alt="EduWell Template">
+				<img src="{{url_for('static', filename = 'images/templatemo-eduwell.png')}}" alt="EduWell Template">
 				<p>Para se manter conectado conosco, faça login com suas informações pessoais!</p>
 				<button class="ghost" id="signIn">Login</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<img src="static/images/templatemo-eduwell.png'">
+				<img src="{{url_for('static', filename = 'images/templatemo-eduwell.png')}}">
 				<p>Está a procura de um emprego e ainda não possui uma conta na OPMART?</p>
 				<button class="ghost" id="signUp">Cadastre-se</button>
 			</div>
