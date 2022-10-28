@@ -60,4 +60,4 @@ class VagaModel(db.Model):
         return cls.query.all()
 
     def toDict(self):
-        return {'nome': self.nome, ' descricao' : self.descricao, 'valor_vaga': self.valor, 'empreendedor_id': self.empreendedor_id}
+        return {'nome': self.nome, 'descricao' : self.descricao, 'valor_vaga': self.valor, 'empreendedor_id': self.empreendedor_id}
