@@ -61,8 +61,13 @@ def rota_vagas_cantidato():
 def rota_editar_cantidato():
     return render_template("candidato/editar_candidato.html")
 
-    
+@app.route("/detalhe_vaga")
+def rota_detalhamento_de_vaga():
+    return render_template("geral/detalhe_vaga.html")
 
+@app.route("/detalhe-candidato")
+def rota_detalhamento_de_candidato():
+    return render_template("empresa/detalhe_candidato.html")
 
 api.add_resource(Empreendedor, '/empreendedor/<int:id>')
 api.add_resource(ListaEmpreendedor, '/empreendedor')
