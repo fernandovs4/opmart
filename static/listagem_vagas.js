@@ -12,15 +12,39 @@ $(document).ready(function () {
       
       $.ajax(settings).done(function (response) {
         console.log(response)
+        let imagem =  "<div class='icon'>\
+        <img src=" + '"'+ "{{url_for('static', filename = 'images/service-icon-01.png')}}" + '"' + " >\
+      </div>"
   
  
         for (id in response) {
         //   $("#ul-resp"+String(i)).remove()
 
-          $("#feed-col").append("<ul id= ul-resp"+ String(id) +"></ul>")
-          $("#ul-resp"+String(id)).append("<li>nome:" + String(response[id]['nome']) + "</li>")
-          $("#ul-resp"+String(id)).append("<li>descrição:" + String(response[id][' descricao']) + "</li>")
-          $("#ul-resp"+String(id)).append("<li>valor:" + String(response[id]['valor_vaga']) + "</li>")}
+          $("#feed_vagass").append(
+                          
+                          "<div class='col-lg-3 align-self-center'>\
+                          <a href = 'detalhe-candidato/?id=" + id + "'>\
+                          <div class='right-info'>\
+                          <div class='col-lg-12'>\
+                            <div class='info-item'>\
+                              <h4>" +   response[id]['nome'] + "</h4>\
+                              <p> " + "descrição: " +  response[id][' descricao'] + "</p>\
+                              <p> " + "salário: " + response[id]['valor_vaga'] + " </p>\
+                              <div id='feed-col' >\
+                              </div>\
+                            </div>\
+                          </div>\
+                        " + "</a> "+ "</div>" 
+
+
+
+
+
+
+          )
+         
+        
+        }
          
   
 })})

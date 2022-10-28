@@ -64,6 +64,10 @@ def rota_editar_cantidato():
 @app.route("/detalhe_vaga")
 def rota_detalhamento_de_vaga():
     return render_template("geral/detalhe_vaga.html")
+    
+@app.route("/listagem-vagas")
+def rota_listagem_candidato():
+    return render_template("geral/feed_vagas.html")
 
 @app.route("/detalhe-candidato")
 def rota_detalhamento_de_candidato():
