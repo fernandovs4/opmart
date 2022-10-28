@@ -150,6 +150,17 @@ body {
   }
 }
 
+.position {
+  margin-left: -100px;
+}
+
+.scroll-to-section {
+  color: #FFFFFF;
+  background: none;
+  border: none;
+  font-size: 14px;
+}
+
 .main-button-gradient a {
   font-size: 13px;
   color: #fff;
