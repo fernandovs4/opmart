@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/templatemo-eduwell-style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/owl.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/lightbox.css')}}">
+    <script src="{{ url_for('static', filename = 'js_empreendedor/inscritos_na_vaga.js')}}"></script>
 <!--
 https://templatemo.com/tm-573-eduwell
 -->
@@ -96,10 +97,22 @@ https://templatemo.com/tm-573-eduwell
               </div>
             </div>
           </div>
+          
         </div>
+        <section class="featured-product">
+          <div class="container">
+            </a><div  class="row" id="feed_vag" >
+      
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
+    
   </section>
+  
+  
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
@@ -153,15 +166,17 @@ https://templatemo.com/tm-573-eduwell
           });
         };
 
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
+        // $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+        //   e.preventDefault();
+        //   showSection($(this).attr('href'), true);
+        // });
 
         $(window).scroll(function () {
           checkSection();
         });
     </script>
+
+    
     
 </body>
 </html>

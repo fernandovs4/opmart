@@ -17,7 +17,7 @@ class Candidato_id_vagas(Resource):
             dic = {}
             for candidatura in candidaturas:
                 vaga = VagaModel.find_by_id(id = candidatura.vaga_id)
-                if vaga:
+                if vaga is not None:
                     dic[vaga.id] = vaga.toDict()
             return dic
         else: 
@@ -68,7 +68,8 @@ class Empreendedor_id_vaga_id_candidatos(Resource):
                 dic = {}
                 for candidatura in candidaturas:
                     candidato = CandidatoModel.find_by_id(candidatura.candidato_id)
-                    dic[candidato.id] = candidato.toDict()
+                    if candidato is  not None:
+                        dic[candidato.id] = candidato.toDict()
 
                 return dic, 200
             else:
