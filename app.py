@@ -37,7 +37,7 @@ def create_tables():
 def hello_world():
     return render_template('home.html')
 
-@app.route("/login-usuario")
+@app.route("/login-candidato")
 def rota_login_candidato_():
     return render_template("candidato/login_candidato.html")
 
