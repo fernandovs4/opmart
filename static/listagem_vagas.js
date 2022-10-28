@@ -12,9 +12,7 @@ $(document).ready(function () {
       
       $.ajax(settings).done(function (response) {
         console.log(response)
-        let imagem =  "<div class='icon'>\
-        <img src=" + '"'+ "{{url_for('static', filename = 'images/service-icon-01.png')}}" + '"' + " >\
-      </div>"
+       
   
  
         for (id in response) {
@@ -23,7 +21,6 @@ $(document).ready(function () {
           $("#feed_vagass").append(
                           
                           "<div class='col-lg-3 align-self-center'>\
-                          <a href = 'detalhe-candidato/?id=" + id + "'>\
                           <div class='right-info'>\
                           <div class='col-lg-12'>\
                             <div class='info-item'>\
@@ -35,9 +32,6 @@ $(document).ready(function () {
                             </div>\
                           </div>\
                         " + "</a> "+ "</div>" 
-
-
-
 
 
 
