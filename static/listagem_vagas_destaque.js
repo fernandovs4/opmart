@@ -18,17 +18,16 @@ $(document).ready(function () {
       
         {
 
-          $("#vagas_em_destaque").text(
-          "<div class='item'>\
-              <div class='service-item'>\
-                <div class='icon'>\
-                  <img src='assets/images/service-icon-02.png'>\
-                </div>\
-                <h4>Fernando Lindão</h4>\
-                <p>Breve descrição.</p>\
-              </div>\
-          </div> "
-        
-          
-          )}}})})
-
+          $("#owl-service-item owl-carousel").text(
+            "<div class='item'>\
+            <div class='service-item'>\
+              <h4>Cargo da vaga</h4>\
+              <p>Breve descrição.</p>\
+            </div>\
+          </div>"
+          )
+        }
+      }
+    }
+    )
+        })

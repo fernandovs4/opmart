@@ -94,9 +94,11 @@ class Empreendedor_id_vaga_id(Resource):
         vagas_do_empreendedor  = VagaModel.search_by_empreendedor_id(id_empreendedor= id_empreendedor)
         for vaga in vagas_do_empreendedor:
             if vaga.id == id_vaga:
-                vaga = VagaModel.find_by_id(id)
+                vaga = VagaModel.find_by_id(id_vaga)
+                
                 try:
-                    vaga.delete()
+                    if vaga is not None:
+                        vaga.delete()
                 except:
                     return {"erro" : 'Falha ao deletar registro da vaga da base.'}, 500
                 candidaturas = CandidaturaModel.find_by_vaga_id(id= id_vaga)

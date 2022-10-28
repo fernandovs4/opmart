@@ -28,14 +28,7 @@ $(document).ready(function () {
       
       $.ajax(settings).done(function (response) {
         console.log(response);
-        url_atual = $(location).attr('href');
-        a = window.location.pathname()
-       
-        window.location.replace(a, 'perfil_empreendedor.html')
-        console.log(url_atual)
-        
-
-  
+    
   
       });
       
