@@ -84,7 +84,16 @@ https://templatemo.com/tm-573-eduwell
                         <div id="detalhe_da_vaga" class="left-content">
                           
                           
+                          
                         </div>
+                        <div class="left-content">
+                          <div id="div_candidatar-se" class="position">
+                            <div class="main-button-gradient">
+                              <div style="margin-left: 18%;"> <a href=""><button id="botao_candidartar-se"  type="submit" class="scroll-to-section">Candidatar-se</button></a></div>
+                            </div>
+                          </div>
+                        </div>
+    
                         <div class="right-image">
                           <img src="{{url_for('static', filename='images/team-member-01.png')}}" alt="">
                         </div>
@@ -100,11 +109,13 @@ https://templatemo.com/tm-573-eduwell
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
     <script src="{{ url_for('static', filename='detalhe_vaga.js') }}"></script>
+    <script src="{{ url_for('static', filename='js_candidato/detalhe_vaga_candidato.js') }}"></script>
 
     <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

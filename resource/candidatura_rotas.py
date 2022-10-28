@@ -21,7 +21,7 @@ class Candidato_id_vagas(Resource):
                     dic[vaga.id] = vaga.toDict()
             return dic
         else: 
-            return {'erro' : 'O candidato ainda não realizou inscrições.'}, 404
+            return {'mensagem' : 'O candidato ainda nao realizou inscricoes.'}, 200
 
 
     ## Realização da inscrição do candidato numa vaga
