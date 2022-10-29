@@ -14,7 +14,7 @@ var vagas_empreendedor = {
               $("#feed_vagass").append(
                               
                               "<div class='col-lg-3 align-self-center'>\
-                              <a href = 'detalhe-vaga?id=" + id + "'>\
+                              <a href = 'detalhe-vaga-empreendedor?id=" + id + "'>\
                               <div class='right-info'>\
                               <div class='col-lg-12'>\
                                 <div class='info-item'>\
