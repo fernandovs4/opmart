@@ -1,2 +1,4 @@
 # opmart
-### python version for virtual env: 3.10.8
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)
+## Projeto em desenvolvimento para a disciplina de Programação Ágil e Eficaz do segundo semestre de Ciência da Computação do Insper. A OPMART é um website que visa forcenecer aos microempreendedores de comunidades, como a de Paraisópolis, uma forma de encontrar trabalhadores de maneira mais rápida, pois sabemos que existe um comércio muito grande de mercados de médio e pequeno porte em Paraisópolis e que existe muita mão de obra. Assim, a OPMART visa ajudar também aqueles que buscam um emprego, pois na OPMART ele vai encontrar anúcios de empregos fornecidos por esses microempreendedores.
