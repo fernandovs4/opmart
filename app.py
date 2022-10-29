@@ -79,7 +79,7 @@ def rota_detalhamento_de_vaga_candidato():
 
 @app.route("/detalhe-vaga-empreendedor")
 def rota_detalhamento_de_vaga_empreendedor():
-    return render_template("candidato/detalhe_vaga_empreendedor.html")
+    return render_template("empreendedor/detalhe_vaga_empreendedor.html")
 
 @app.route("/listagem-vagas")
 def rota_listagem_candidato():

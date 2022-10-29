@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/templatemo-eduwell-style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/owl.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/lightbox.css')}}">
+    <script src="{{ url_for('static', filename = 'js_empreendedor/inscritos_na_vaga.js')}}"></script>
 <!--
 https://templatemo.com/tm-573-eduwell
 -->
@@ -36,7 +37,7 @@ https://templatemo.com/tm-573-eduwell
               <div class="col-12">
                 <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
-                  <a href="home_candidato" class="logo">
+                  <a href="home-candidato" class="logo">
                       <img src="{{url_for('static', filename='images/templatemo-eduwell.png')}}">
                   </a>
                   
@@ -83,39 +84,58 @@ https://templatemo.com/tm-573-eduwell
                       <div>
                         <div id="detalhe_da_vaga" class="left-content">
                           
-                          
-                          
                         </div>
-                        <div class="left-content">
-                          <div id="div_candidatar-se" class="position">
+
+                        <div id="div_excluir_vaga" class="left-content">
+                          <div class="position">
                             <div class="main-button-gradient">
-                              <div style="margin-left: 18%;"> <a href=""><button id="botao_candidartar-se"  type="submit" class="scroll-to-section">Candidatar-se</button></a></div>
+                              <div style="margin-left: 18%;"> <a href=""><button id="botao_excluir_vaga"  type="submit" class="scroll-to-section">Excluir vaga</button></a></div>
                             </div>
                           </div>
                         </div>
-    
+
                         <div class="right-image">
                           <img src="{{url_for('static', filename='images/team-member-01.png')}}" alt="">
                         </div>
+                        
                       </div>
                     </li>
                       <li>
                         </li>
                     </ul>
+                    
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
+        
+        <section class="featured-product">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading">
+              
+              <h4>Candidatos <em>inscritos</em> nessa vaga</h4>
+            </div>
+          </div>
+          <div class="container">
+            </a><div  class="row" id="feed_vag" >
+      
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-
+    
   </section>
+  
+  
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
     <script src="{{ url_for('static', filename='detalhe_vaga.js') }}"></script>
-    <script src="{{ url_for('static', filename='js_candidato/detalhe_vaga_candidato.js') }}"></script>
+    <script src="{{ url_for('static', filename='js_empreendedor/detalhe_vaga_empreendedor.js') }}"></script>
 
     <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -164,15 +184,17 @@ https://templatemo.com/tm-573-eduwell
           });
         };
 
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
+        // $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+        //   e.preventDefault();
+        //   showSection($(this).attr('href'), true);
+        // });
 
         $(window).scroll(function () {
           checkSection();
         });
     </script>
+
+    
     
 </body>
 </html>
