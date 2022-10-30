@@ -22,7 +22,7 @@ Inovando e otimizando os processos de seleção e recrutamento, por meio de noss
 `Funcionalidade 3`: Como candidato, é possível visualizar as vagas que os empreendedores anunciaram
 `Funcionalidade 4`: Como candidato, é possível visualizar as informações de determinada vaga, tais como nome da vaga, endereço, a descrição da vaga e o salário.
 
-# :hammer: Técnicas e tecnologias libs utilizadas
+# :hammer: Técnicas, tecnologias e libs utilizadas
 `Paradigmas de orientação a objetos`
 `Python(Flask)`
 `Banco de dados objeto-relacional com SQLAlchemy`
