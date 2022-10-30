@@ -61,7 +61,7 @@
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
             <h6>Altere suas as informações pessoais</h6>
-            <h4>Editar <em>perfil</em></h4>
+            <h4>Editar  <em>perfil</em></h4>
           </div>
         </div>
         <div class="col-lg-10 offset-lg-1">
@@ -70,44 +70,48 @@
                 <div class="col-lg-12">
                   <ul class="nacc">
                     <li class="active">
-                      <div>
-                        <div class="left-content">
-                            <div class="col-lg-12">
-                                <fieldset>
-                                  <input class="bota" type="text" name="nome" id="nome" placeholder="Nome" autocomplete="on" required>
-                                </fieldset>
-                            </div>       
-                        </div>
-                        <div class="left-content">
-                            <div class="col-lg-12">
-                                <fieldset>
-                                  <input class="bota" type="text" name="whatsapp" id="whatsapp" placeholder="Telefone" autocomplete="on" required>
-                                </fieldset>
-                            </div> 
-                        </div>  
-                        <div class="left-content">
-                            <div class="col-lg-12">
-                                <fieldset>
-                                  <input class="bota" type="text" name="email" id="email" placeholder="Email" autocomplete="on" required>
-                                </fieldset>
-                            </div> 
-                        </div>    
-                        <div class="left-content">
-                            <div class="col-lg-12">
-                                <fieldset>
-                                  <input class="bota" type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="on" required>
-                                </fieldset>
-                            </div> 
-                        </div>  
-                        <div class="position">
-                          <div class="main-button-gradient">
-                            <a href="perfil-candidato"><button  type="submit" class="scroll-to-section">Salvar Alterações</button></a>
+
+                      <div class = "form_editar">
+                          <div class="left-content">
+                              <div class="col-lg-12">
+                                  <fieldset>
+                                    <input class="bota" type="text" name="nome" id="nome" placeholder="Nome" autocomplete="on" required>
+                                  </fieldset>
+                              </div>       
+                          </div>
+                          <div class="left-content">
+                              <div class="col-lg-12">
+                                  <fieldset>
+                                    <input class="bota" type="text" name="whatsapp" id="whatsapp" placeholder="Telefone" autocomplete="on" required>
+                                  </fieldset>
+                              </div> 
+                          </div>  
+                          <div class="left-content">
+                              <div class="col-lg-12">
+                                  <fieldset>
+                                    <input class="bota" type="text" name="email" id="email" placeholder="Email" autocomplete="on" required>
+                                  </fieldset>
+                              </div> 
+                          </div>    
+                          <div class="left-content">
+                              <div class="col-lg-12">
+                                  <fieldset>
+                                    <input class="bota" type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="on" required>
+                                  </fieldset>
+                              </div> 
+                          </div>  
+                          <div class="position">
+                            <div class="main-button-gradient">
+                              <a href="perfil-candidato"><button type="submit" class="scroll-to-section updateButton" name = "teste" id="teste">Salvar Alterações</button></a>
+                            </div>
+                          </div>
+                          <div class="right-image">
+                            <img src="{{url_for('static', filename = 'images/team-member-01.png')}}" >
                           </div>
                         </div>
-                        <div class="right-image">
-                          <img src="{{url_for('static', filename = 'images/team-member-01.png')}}" >
-                        </div>
-                      </div>
+
+
+
                     </li>
                       <li>
                         </li>

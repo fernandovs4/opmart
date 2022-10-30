@@ -10,12 +10,22 @@ var vagas_candidato = {
         console.log(response);
         for (id in response) {
            
-
-            $("#listagem_vagas").append("<ul id= ul-resp_vagas"+ String(id) +"></ul>")
-            $("#ul-resp_vagas"+String(id)).append("<li>nome:" + String(response[id]['nome']) + "</li>")
-            $("#ul-resp_vagas"+String(id)).append("<li>descrição:" + String(response[id][' descricao']) + "</li>")
-            $("#ul-resp_vagas"+String(id)).append("<li>valor:" + String(response[id]['valor_vaga']) + "</li>")}
-       
-
+            $("#vagas_candidato").append(
+                              
+                "<div class='col-lg-3 align-self-center'>\
+                <a href = 'detalhe-vaga?id=" + id + "'>\
+                <div class='right-info'>\
+                <div class='col-lg-12'>\
+                  <div class='info-item'>\
+                    <h4>" +   response[id]['nome'] + "</h4>\
+                    <p> " + "descrição: " +  response[id]['descricao'] + "</p>\
+                    <p> " + "salário: " + response[id]['valor_vaga'] + " </p>\
+                    <div id='feed-col' >\
+                    </div>\
+                  </div>\
+                </div>\
+              " + "</a> "+ "</div>" 
+            )
+        }
     });
 })
