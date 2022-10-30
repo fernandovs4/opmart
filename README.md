@@ -32,6 +32,6 @@ Inovando e otimizando os processos de seleção e recrutamento, por meio de noss
 <a href = "https://github.com/esdrasgc">Esdras Gomes</a>
 <a href = "https://github.com/Isabelleatt">Isabelle</a>
 <a href = "https://github.com/LuccaHiratsuca">Lucca Hiratsuca</a>
-<a href = "https://github.com/LuccaHiratsuca">Fernando Santos</a>
+<a href = "https://github.com/fernandovs4">Fernando Santos</a>
 
 
