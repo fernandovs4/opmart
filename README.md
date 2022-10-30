@@ -35,4 +35,6 @@ Inovando e otimizando os processos de seleção e recrutamento, por meio de noss
 ![isa](https://user-images.githubusercontent.com/102231198/198857936-dbf49659-de6d-41a1-accf-8ab305d35af2.png)
 <a href = "https://github.com/LuccaHiratsuca">Lucca Hiratsuca</a>
 ![lucca](https://user-images.githubusercontent.com/102231198/198857971-238f81de-b134-4e94-835f-1f7888ef1a10.png)
+<a href = "https://github.com/LuccaHiratsuca">Fernando Santos</a>
+![fer](https://user-images.githubusercontent.com/102231198/198858002-d06a6519-d251-4171-8ed9-792338a6fa61.png)
 
