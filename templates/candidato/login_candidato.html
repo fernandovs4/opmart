@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opmart | Login & Cadastro</title>
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/login.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'js_candidato/cadastro_candidato.js')}}">
 </head>
 <body>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form>
+		<form id="form_editar">
 			<h1>Criar Conta</h1>
 			
 			<span></span>
-			<input type="text" placeholder="Nome" />
-			<input type="whatsapp" placeholder="Telefone" />
-			<input type="email" placeholder="Email" />
-			<input type="Endereço" placeholder="Endereço" />
-			<input type="password" placeholder="Senha" />
-			<button> <a style="color:#FFFFFF" href="home-candidato">Login</a></button>
+			<input type="text" name = "nome" id = "nome" placeholder="Nome" />
+			<input type="tex" name = "whatsapp" id="whatsapp" placeholder="Telefone" />
+			<input type="text" name = "email" id = "email" placeholder="Email" />
+			<input type="text" name = "endereco" id = "endereco" placeholder="Endereço" />
+			<input type="text" name = "descricao" id = "descricao" placeholder="Descrição" />
+			<button type="submit" > <a style="color:#FFFFFF" >Login</a></button>
 		</form>
 	</div>
 
@@ -52,16 +54,22 @@
 
 <script>
 const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+
+setTimeout(signUpButton.addEventListener('click', () => {
+	const container = document.getElementById('container');
+	container.classList.add("right-panel-active")
+	
+}), 3000)
+
+
+setTimeout(signInButton.addEventListener('click', () => {
+	const signInButton = document.getElementById('signIn');
+	container.classList.remove("right-panel-active")
+	
+}), 3000)
+
 </script>
 </body>
 </html>

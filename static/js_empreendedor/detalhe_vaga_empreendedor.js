@@ -33,11 +33,23 @@ $(document).ready(function () {
                 },
               
             };
+
+            
+           
               
               $.ajax(settings2).done(function (response2) {
                 console.log(response2)
+                alert("Vaga deletada com sucesso!!")
+              
               });
-              window.location.replace("vagas-empreendedor")
+              setTimeout(function(){ 
+                window.location.replace("vagas-empreendedor")
+                
+            }, 3000);
+            
+
+         
+              
                                                             })
             
         }
@@ -48,3 +60,5 @@ $(document).ready(function () {
                                 }
                             
                 )
+
+              

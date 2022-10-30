@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <title>Opmart</title>
@@ -35,23 +36,16 @@ https://templatemo.com/tm-573-eduwell
               <div class="col-12">
                 <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
-                  <a href="home_candidato" class="logo">
+                  <a href="home-empreendedor" class="logo">
                       <img src="{{url_for('static', filename='images/templatemo-eduwell.png')}}">
                   </a>
                   
                 <ul class="nav">
-                    <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                    <li class="scroll-to-section"><a href="#courses">Sobre Nós</a></li>
-                    <li class="scroll-to-section"><a href="#testimonials">Depoimentos</a></li>
-                    <li class="has-sub">
-                        <a href="javascript:void(0)">Vagas</a>
-                        <ul class="sub-menu">
-                            <li><a href="#services">Principais Vagas</a></li>
-                            <li><a href="listagem-vagas">Feed de vagas</a></li>
-                        </ul>
-                    </li>
-                    <li class="scroll-to-section"><a href="">Login Usuário</a></li> 
-                    <li class="scroll-to-section"><a href="">Login empreendedor</a></li> 
+                    <li class="scroll-to-section"><a href="home-empreendedor" class="active">Home</a></li>
+                    <li class="scroll-to-section"><a href="perfil-empreendedor" class="active">Perfil</a></li>
+                    <li class="scroll-to-section"><a href="feed-vagas-empreendedor" class="active">Feed de vagas</a></li>
+                   
+                   
                 </ul>          
                   <a class='menu-trigger'>
                       <span>Menu</span>
@@ -69,8 +63,8 @@ https://templatemo.com/tm-573-eduwell
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
-            <h6>Saiba mais informações sobre o candidato da sua vaga</h6>
-            <h4>Perfil do <em>Candidato</em></h4>
+            
+            <h4>Informações sobre o  <em>Candidato</em></h4>
           </div>
         </div>
         <div class="col-lg-10 offset-lg-1">
@@ -80,13 +74,13 @@ https://templatemo.com/tm-573-eduwell
                   <ul class="nacc">
                     <li class="active">
                       <div>
-                        <div class="left-content">
-                          <h4>Nome do candidato</h4>
-                          <p>Telefone:</p>
-                          <p>Endereço:</p>
-                          <p>Email:</p>
-                          <p>Descrição:</p>
+                        <div id="detalhe_do_candidato" class="left-content">
+                          
+                          
+                          
                         </div>
+                        
+    
                         <div class="right-image">
                           <img src="{{url_for('static', filename='images/team-member-01.png')}}" alt="">
                         </div>
@@ -102,10 +96,14 @@ https://templatemo.com/tm-573-eduwell
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='js_empreendedor/informacoes_candidato_inscrito.js') }}"></script>
+  
+
     <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
@@ -153,10 +151,10 @@ https://templatemo.com/tm-573-eduwell
           });
         };
 
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
+        // $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+        //   e.preventDefault();
+        //   showSection($(this).attr('href'), true);
+        // });
 
         $(window).scroll(function () {
           checkSection();

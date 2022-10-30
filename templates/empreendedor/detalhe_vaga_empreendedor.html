@@ -37,23 +37,15 @@ https://templatemo.com/tm-573-eduwell
               <div class="col-12">
                 <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
-                  <a href="home-candidato" class="logo">
+                  <a href="home-empreendedor" class="logo">
                       <img src="{{url_for('static', filename='images/templatemo-eduwell.png')}}">
                   </a>
                   
                 <ul class="nav">
-                    <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                    <li class="scroll-to-section"><a href="#courses">Sobre Nós</a></li>
-                    <li class="scroll-to-section"><a href="#testimonials">Depoimentos</a></li>
-                    <li class="has-sub">
-                        <a href="javascript:void(0)">Vagas</a>
-                        <ul class="sub-menu">
-                            <li><a href="#services">Principais Vagas</a></li>
-                            <li><a href="listagem-vagas">Feed de vagas</a></li>
-                        </ul>
-                    </li>
-                    <li class="scroll-to-section"><a href="">Login Usuário</a></li> 
-                    <li class="scroll-to-section"><a href="">Login empreendedor</a></li> 
+                    <li class="scroll-to-section"><a href="home-empreendedor" class="active">Home</a></li>
+                    <li class="scroll-to-section"><a href="perfil-empreendedor" class="active">Perfil</a></li>
+                    <li class="scroll-to-section"><a href="feed-vagas-empreendedor" class="active">Feed de Vagas</a></li>
+             
                 </ul>          
                   <a class='menu-trigger'>
                       <span>Menu</span>
@@ -71,7 +63,7 @@ https://templatemo.com/tm-573-eduwell
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
-            <h6>Uma ótima oportunidade bem próximo de você</h6>
+           
             <h4>Saiba mais informações dessa <em>Vaga</em></h4>
           </div>
         </div>
@@ -85,11 +77,13 @@ https://templatemo.com/tm-573-eduwell
                         <div id="detalhe_da_vaga" class="left-content">
                           
                         </div>
+                        
+                     
 
                         <div id="div_excluir_vaga" class="left-content">
                           <div class="position">
                             <div class="main-button-gradient">
-                              <div style="margin-left: 18%;"> <a href=""><button id="botao_excluir_vaga"  type="submit" class="scroll-to-section">Excluir vaga</button></a></div>
+                              <div style="margin-left: 18%;"> <a href=""><button id="botao_excluir_vaga"  type="submit" class="scroll-to-section"  >Excluir vaga</button></a></div>
                             </div>
                           </div>
                         </div>
@@ -115,7 +109,7 @@ https://templatemo.com/tm-573-eduwell
           <div class="col-lg-6 offset-lg-3">
             <div class="section-heading">
               
-              <h4>Candidatos <em>inscritos</em> nessa vaga</h4>
+              <h4 id="inscrito_na_vaga" >Candidatos <em>inscritos</em> nessa vaga</h4>
             </div>
           </div>
           <div class="container">
@@ -134,7 +128,7 @@ https://templatemo.com/tm-573-eduwell
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="{{ url_for('static', filename='detalhe_vaga.js') }}"></script>
+    <script src="{{ url_for('static', filename='js_empreendedor/informacoes_da_vaga.js') }}"></script>
     <script src="{{ url_for('static', filename='js_empreendedor/detalhe_vaga_empreendedor.js') }}"></script>
 
     <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>

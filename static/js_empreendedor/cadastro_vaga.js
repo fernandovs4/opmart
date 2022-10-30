@@ -45,6 +45,9 @@ $(document).ready(function () {
 
         }
         $.ajax(settings).done(function (response) {
+          alert("Vaga cadastrada com sucesso!")
+          setTimeout(
+          window.location.replace("home-empreendedor", "minhas-vagas"), 2000)
           
           
           console.log(response)

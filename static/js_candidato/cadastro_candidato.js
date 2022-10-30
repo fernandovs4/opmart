@@ -1,15 +1,16 @@
 $(document).ready(function () {
+
+    
     
     $("#form_editar").submit(function (event) {
-       
-   
+      
       event.preventDefault();
 
   
       var settings = {
-        "url": "http://localhost:5000/empreendedor/1",
-        "method": "PUT",
-        "timeout": 0,
+        "url": "http://localhost:5000/candidato",
+        "method": "POST",
+        "timeout": 1,
         "headers": {
           "Content-Type": "application/json"
         },
@@ -18,40 +19,34 @@ $(document).ready(function () {
           "whatsapp" : $("#whatsapp").val(),
           "endereco" : $("#endereco").val(),
           "email" : $("#email").val(),
-         
+          "descricao" : $("#descricao").val(),
          
 
 
         }),
       };
       
-      
       $.ajax(settings).done(function (response) {
         console.log(response);
-
         setTimeout(
           
-          alert("Perfil alterado com sucesso! Você será redirecionado pro seu perfil")
+          alert("Cadastro efetuado com sucesso! Você será redirecionado pra área de login")
           
           , 3000
         )
         setTimeout(
           
-          window.location.href = "perfil-empreendedor"
+          window.location.href = "login-candidato"
           
           , 2000
         )
 
-    
+        
+       
+
+  
   
       });
-      
      
       
-    });
-  
-    
-  
-   });
-  
-    
+    })})

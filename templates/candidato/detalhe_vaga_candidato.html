@@ -36,23 +36,16 @@ https://templatemo.com/tm-573-eduwell
               <div class="col-12">
                 <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
-                  <a href="home_candidato" class="logo">
+                  <a href="home-candidato" class="logo">
                       <img src="{{url_for('static', filename='images/templatemo-eduwell.png')}}">
                   </a>
                   
                 <ul class="nav">
-                    <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                    <li class="scroll-to-section"><a href="#courses">Sobre Nós</a></li>
-                    <li class="scroll-to-section"><a href="#testimonials">Depoimentos</a></li>
-                    <li class="has-sub">
-                        <a href="javascript:void(0)">Vagas</a>
-                        <ul class="sub-menu">
-                            <li><a href="#services">Principais Vagas</a></li>
-                            <li><a href="listagem-vagas">Feed de vagas</a></li>
-                        </ul>
-                    </li>
-                    <li class="scroll-to-section"><a href="">Login Usuário</a></li> 
-                    <li class="scroll-to-section"><a href="">Login empreendedor</a></li> 
+                    <li class="scroll-to-section"><a href="home-candidato" class="active">Home</a></li>
+                    <li class="scroll-to-section"><a href="perfil-candidato" class="active">Perfil</a></li>
+                    <li class="scroll-to-section"><a href="listagem-vagas-candidato" class="active">Feed de vagas</a></li>
+                   
+                   
                 </ul>          
                   <a class='menu-trigger'>
                       <span>Menu</span>
@@ -114,7 +107,7 @@ https://templatemo.com/tm-573-eduwell
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="{{ url_for('static', filename='detalhe_vaga.js') }}"></script>
+    <script src="{{ url_for('static', filename='js_candidato/informacoes_da_vaga.js') }}"></script>
     <script src="{{ url_for('static', filename='js_candidato/detalhe_vaga_candidato.js') }}"></script>
 
     <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
@@ -164,10 +157,10 @@ https://templatemo.com/tm-573-eduwell
           });
         };
 
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
+        // $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+        //   e.preventDefault();
+        //   showSection($(this).attr('href'), true);
+        // });
 
         $(window).scroll(function () {
           checkSection();

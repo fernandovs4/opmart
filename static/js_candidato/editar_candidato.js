@@ -25,51 +25,25 @@ $(document).ready(function () {
       
       $.ajax(settings).done(function (response) {
         console.log(response);
-        window.location.reload()
+        setTimeout(
+          
+          alert("Perfil alterado com sucesso! Você será redirecionado pro seu perfil")
+          
+          , 3000
+        )
+        setTimeout(
+          
+          window.location.href = "perfil-candidato"
+          
+          , 2000
+        )
+
+        
+       
 
   
   
       });
      
       
-    });
-  
-    
-  
-    $("#form_candidato").submit(function (event) {
-      
-      event.preventDefault();
-  
-   
-  
-      var settings = {
-        "url": "http://localhost:5000/candidato",
-        "method": "POST",
-        "timeout": 0,
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "data": JSON.stringify({
-          "nome": $("#nome_candidato").val(),
-          "whatsapp" : $("#whatsapp_candidato").val(),
-          "endereco" : $("#endereco_candidato").val(),
-          "email" : $("#email_candidato").val(),
-
-        }),
-      };
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-        for (id in response) {
-    
-            $("#feed-col").append("<ul id= ul-resp"+ String(id) +"></ul>")
-            $("#ul-resp"+String(id)).append("<li>nome:" + String(response[id]['nome']) + "</li>")
-            $("#ul-resp"+String(id)).append("<li>descrição:" + String(response[id][' descricao']) + "</li>")
-            $("#ul-resp"+String(id)).append("<li>valor:" + String(response[id]['valor_vaga']) + "</li>")}
-  
-  
-      });
-    })});
-  
-    
-  
+    })})

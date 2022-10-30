@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>editar-perfil</title>
    
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/edit_candidato.css')}}">
     <link href="{{url_for('static', filename = 'vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -33,16 +33,11 @@
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
                 <ul class="nav">
-                    <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
-                    <li class="scroll-to-section"><a href="sobre-nos">Sobre Nós</a></li>
-                    <li class="scroll-to-section"><a href="depoimentos">Depoimentos</a></li>
-                    <li class="has-sub">
-                        <a href="javascript:void(0)">Vagas</a>
-                        <ul class="sub-menu">
-                            <li><a href="#services">Principais Vagas</a></li>
-                            <li><a href="listagem_vagas">Feed de vagas</a></li>
-                        </ul>
-                    </li>
+                    <li class="scroll-to-section"><a href="home-candidato" class="active">Home</a></li>
+                    <li class="scroll-to-section"><a href="perfil-candidato" class="active">Perfil</a></li>
+                    <li class="scroll-to-section"><a href="listagem-vagas-candidato" class="active">Feed de Vagas</a></li>
+                    
+                    
                 </ul>          
                   <a class='menu-trigger'>
                       <span>Menu</span>
@@ -70,7 +65,7 @@
                 <div class="col-lg-12">
                   <ul class="nacc">
                     <li class="active">
-                      <form  action="perfil-candidato" id="form_editar">
+                      <form  id="form_editar">
                       <div>
                         <div class="left-content">
                             <div class="col-lg-12">
@@ -105,11 +100,12 @@
                             <a href="perfil-candidato" ><button  type="submit" class="scroll-to-section">Salvar Alterações</button></a>
                           </div>
                         </div>
+                      </form>
                         <div class="right-image">
                           <img src="{{url_for('static', filename = 'images/team-member-01.png')}}" >
                         </div>
                       </div>
-                      </form>
+                      
                     </li>
                       <li>
                         </li>
@@ -126,16 +122,16 @@
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
     <script src="{{url_for('static', filename = 'vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{url_for('static', filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
+    <!-- <script src="{{url_for('static', filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script> -->
+<!-- 
     <script src="{{url_for('static', filename = 'js/isotope.min.js')}}"></script>
     <script src="{{url_for('static', filename = 'js/owl-carousel.js')}}"></script>
     <script src="{{url_for('static', filename = 'js/lightbox.js')}}"></script>
     <script src="{{url_for('static', filename = 'js/tabs.js')}}"></script>
     <script src="{{url_for('static', filename = 'js/video.js')}}"></script>
     <script src="{{url_for('static', filename = 'js/slick-slider.js')}}"></script>
-    <script src="{{url_for('static', filename = 'js/custom.js')}}"></script>
-    <script>
+    <script src="{{url_for('static', filename = 'js/custom.js')}}"></script> -->
+    <script> 
         //according to loftblog tut
         $('.nav li:first').addClass('active');
 

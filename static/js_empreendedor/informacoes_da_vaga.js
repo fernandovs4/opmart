@@ -27,6 +27,7 @@ $(document).ready(function () {
                           <p>Telefone: " + response2["whatsapp"] + "</p>\
                           <p>Endereço: " + response2["endereco"] +"</p>\
                           <p>Email: " + response2["email"] +"</p>\
+                          <p>Salário: " + response["valor_vaga"] + "</p>\
                           <p>Descrição: " + response["descricao"] + "</p>\
                 ")
         }
@@ -36,4 +37,3 @@ $(document).ready(function () {
      }
     )
 })
-

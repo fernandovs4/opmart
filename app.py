@@ -33,25 +33,53 @@ def create_tables():
     db.create_all()
 
 
-@app.route("/") #home
-def hello_world():
-    return render_template('home.html')
-
-@app.route("/login-candidato")
-def rota_login_candidato_():
-    return render_template("candidato/login_candidato.html")
+# Rotas do empreendedor
 
 @app.route("/login-empreendedor")
 def rota_login_empreendedor():
     return render_template("empreendedor/login_empreendedor.html")
 
-@app.route("/home-candidato")
-def home_cantidato():
-    return render_template("candidato/home_candidato.html")
-
 @app.route("/home-empreendedor")
 def rota_home_empreendedor():
     return render_template("empreendedor/home_empreendedor.html")
+
+@app.route("/editar-empreendedor")
+def rota_editar_empreendedor():
+    return render_template("empreendedor/editar_empreendedor.html")
+
+@app.route("/detalhe-vaga-empreendedor")
+def rota_detalhamento_de_vaga_empreendedor():
+    return render_template("empreendedor/detalhe_vaga_empreendedor.html")
+
+@app.route("/perfil-empreendedor")
+def rota_perfil_empreendedor():
+    return render_template("empreendedor/perfil_empreendedor.html")
+
+@app.route("/vagas-empreendedor")
+def rota_vagas_empreendedor():
+    return render_template("empreendedor/vagas_empreendedor.html")
+
+@app.route("/feed-vagas-empreendedor")
+def rota_feed_vagas_empreendedor():
+    return render_template("empreendedor/feed_vagas_empreendedor.html")
+
+@app.route("/perfil-candidato-inscrito")
+def rota_perfil_candidato_inscrito():
+    return render_template("empreendedor/perfil_candidato_inscrito.html")
+
+
+
+
+
+# Rotas do candidato
+
+@app.route("/login-candidato")
+def rota_login_candidato_():
+    return render_template("candidato/login_candidato.html")
+
+@app.route("/home-candidato")
+def home_cantidato():
+    return render_template("candidato/home_candidato.html")
 
 @app.route("/perfil-candidato")
 def perfil_cantidato():
@@ -65,37 +93,31 @@ def rota_vagas_cantidato():
 def rota_editar_cantidato():
     return render_template("candidato/editar_candidato.html")
 
-@app.route("/editar-empreendedor")
-def rota_editar_empreendedor():
-    return render_template("empreendedor/editar_empreendedor.html")
-
-@app.route("/detalhe-vaga")
-def rota_detalhamento_de_vaga():
-    return render_template("geral/detalhe_vaga.html")
-
 @app.route("/detalhe-vaga-candidato")
 def rota_detalhamento_de_vaga_candidato():
     return render_template("candidato/detalhe_vaga_candidato.html")
 
-@app.route("/detalhe-vaga-empreendedor")
-def rota_detalhamento_de_vaga_empreendedor():
-    return render_template("empreendedor/detalhe_vaga_empreendedor.html")
+@app.route("/listagem-vagas-candidato")
+def rota_listagem_vagas_candidato():
+    return render_template("candidato/feed_vagas_candidato.html")
 
-@app.route("/listagem-vagas")
-def rota_listagem_candidato():
-    return render_template("geral/feed_vagas.html")
 
-@app.route("/detalhe-candidato")
-def rota_detalhamento_de_candidato():
-    return render_template("empresa/detalhe_candidato.html")
 
-@app.route("/perfil-empreendedor")
-def rota_perfil_empreendedor():
-    return render_template("empreendedor/perfil_empreendedor.html")
 
-@app.route("/vagas-empreendedor")
-def rota_vagas_empreendedor():
-    return render_template("empreendedor/vagas_empreendedor.html")
+
+# Rotas para não logado
+
+@app.route("/") #home
+def hello_world():
+    return render_template('geral/home_geral.html')
+
+@app.route("/listagem-vagas-geral")
+def rota_listagem_vagas_geral():
+    return render_template("geral/feed_vagas_geral.html")
+
+@app.route("/detalhe-vaga-geral")
+def rota_vagas_geral():
+    return render_template("geral/detalhe_vaga_geral.html")
 
 
 
