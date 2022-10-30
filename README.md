@@ -33,4 +33,6 @@ Inovando e otimizando os processos de seleção e recrutamento, por meio de noss
 ![edrass](https://user-images.githubusercontent.com/102231198/198857806-2201130c-da44-43b1-83e6-d2671a0be485.jpg
 <a href = "https://github.com/Isabelleatt">Isabelle</a>
 ![isa](https://user-images.githubusercontent.com/102231198/198857936-dbf49659-de6d-41a1-accf-8ab305d35af2.png)
+<a href = "https://github.com/LuccaHiratsuca">Lucca Hiratsuca</a>
+![lucca](https://user-images.githubusercontent.com/102231198/198857971-238f81de-b134-4e94-835f-1f7888ef1a10.png)
 
