@@ -28,7 +28,7 @@ Inovando e otimizando os processos de seleção e recrutamento, por meio de noss
 `Banco de dados objeto-relacional com SQLAlchemy`
 `JavaScript, CSS e HTML`
 
-# Contribuidores
+# Autores
 <a href = "https://github.com/esdrasgc">Esdras Gomes</a>
 <a href = "https://github.com/Isabelleatt">Isabelle</a>
 <a href = "https://github.com/LuccaHiratsuca">Lucca Hiratsuca</a>
