@@ -1,6 +1,7 @@
 # opmart
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 ![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)
+
 ## Projeto em desenvolvimento para a disciplina de Programação Ágil e Eficaz do segundo semestre de Ciência da Computação do Insper.
 ### Problema
 Diante da pandemia do Coronavírus, desemprego bate recorde histórico e atinge mais de 14,8 milhões de brasileiros, principalmente, negros, mulheres e jovens. (IBGE & Pnad, 2021)
