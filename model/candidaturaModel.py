@@ -58,4 +58,5 @@ class CandidaturaModel(db.Model):
     
     @classmethod
     def search_all(cls):
+        
         return cls.query.all()
